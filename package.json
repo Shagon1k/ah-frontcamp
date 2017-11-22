@@ -1,0 +1,20 @@
+{
+  "name": "ah-frontcamp",
+  "version": "1.0.0",
+  "description": "Alexey Hurynovich FrontCamp app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shagon1k/ah-frontcamp.git"
+  },
+  "author": "Alex Gur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shagon1k/ah-frontcamp/issues"
+  },
+  "homepage": "https://github.com/Shagon1k/ah-frontcamp#readme"
+}
