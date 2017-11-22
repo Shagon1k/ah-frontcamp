@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.articlesContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.article {
+    flex-basis: 30%;
+}
