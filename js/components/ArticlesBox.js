@@ -1,35 +1,55 @@
 import Article from './Article.js';
 
 export default class ArticlesBox {
-    constructor(articlesArray, articlesDefaultNumber = 12, articlesAddingNumber = 3) {
-        this.articlesArray = articlesArray;
+    constructor(articlesDefaultNumber = 12, articlesAddingNumber = 3) {
+        this.articlesArray = [];
         this._articlesAddingNumber = articlesAddingNumber;
         this._articlesDisplayedNumber = articlesDefaultNumber;
     }
 
-    get articlesAddingNumber () {
+    get articlesAddingNumber() {
         return this._articlesAddingNumber;
     }
 
-    set articlesAddingNumber (newNumber) {
+    set articlesAddingNumber(newNumber) {
         if (newNumber) {
             this._articlesAddingNumber = newNumber;
         }
     }
 
-    addArticles() {
-        this._articlesDisplayedNumber += this._articlesAddingNumber;
+    increaseRenderedArticles() {
+        if ((this._articlesDisplayedNumber + this._articlesAddingNumber) > this.articlesArray.length) {
+            this._articlesDisplayedNumber = this.articlesArray.length;
+        } else {
+            this._articlesDisplayedNumber += this._articlesAddingNumber;
+        }
+    }
+
+    addSource(articles) {
+        let addedArticles = [];
+
+        articles.forEach((elem)=>{
+            addedArticles.push(new Article(elem.author, elem.description, elem.publishedAt, elem.source, elem.title, elem.url, elem.urlToImage));
+        })
+
+        this.articlesArray = this.articlesArray.concat(addedArticles);
+    }
+
+    removeSource(sourceId) {
+        this.articlesArray = this.articlesArray.filter((value)=>value.sourceId != sourceId);
     }
 
     render() {
-        let articlesStringTemplate = '';
+        let articlesStringTemplate = '',
+            numberToDisplay = this._articlesDisplayedNumber > this.articlesArray.length ?
+                this.articlesArray.length :
+                this._articlesDisplayedNumber;
 
-        //Добавить: Проверка на конец массива
-        for (let i = 0; i < this._articlesDisplayedNumber; i++) {
+        for (let i = 0; i < numberToDisplay; i++) {
             articlesStringTemplate += this.articlesArray[i].render();
         }
 
-        return `<div class="articlesContainer">
+        return `<div class="articlesBox">
                     ${articlesStringTemplate}
                 </div>`
     }

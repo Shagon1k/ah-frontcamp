@@ -10,7 +10,32 @@ button {
     cursor: pointer;
 }
 
-.articlesContainer {
+.mainContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 50px;
+}
+    .mainContainer .sourceListContainer {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .mainContainer .articleBoxContainer {
+        flex-basis: 100%;
+    }
+
+.sourceList {
+
+}
+
+.sourceList .sourceItem {
+    display:  inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.articlesBox {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
