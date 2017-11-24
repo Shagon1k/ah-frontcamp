@@ -8,6 +8,4 @@ const NEWS_SOURCES = [{name: 'ABC News', id: 'abc-news'},
                         {name: 'NBC News', id: 'nbc-news'},
                         {name: 'News24', id: 'news24'}]
 
-// URL example: https://newsapi.org/v2/top-headlines?sources=news24&apiKey=46cfaea2895a4945a21de12ace31007c
-
 export {API_KEY, ARTICLES_ADDING_NUMBER, ARTICLES_DEFAULT_NUMBER, NEWS_SOURCES};

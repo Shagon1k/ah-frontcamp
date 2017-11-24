@@ -28,7 +28,9 @@ export default class ArticlesBox {
     addSource(articles) {
         let addedArticles = [];
 
-        articles.forEach((elem)=>{
+        if (this.articlesArray.find((e) => e.sourceId === articles[0].source.id)) return;
+
+        articles.forEach((elem) => {
             addedArticles.push(new Article(elem.author, elem.description, elem.publishedAt, elem.source, elem.title, elem.url, elem.urlToImage));
         })
 

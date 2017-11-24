@@ -17,8 +17,9 @@ button {
     margin-top: 50px;
 }
     .mainContainer .sourceListContainer {
-        width: 50%;
+        width: 70%;
         margin-bottom: 50px;
+        text-align: center;
     }
 
     .mainContainer .articleBoxContainer {
@@ -31,7 +32,7 @@ button {
 
 .sourceList .sourceItem {
     display:  inline-block;
-    margin-right: 30px;
+    margin: 5px 20px 5px 0;
     cursor: pointer;
 }
 
@@ -42,5 +43,18 @@ button {
 }
 
 .article {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
     flex-basis: 30%;
+    margin-bottom: 30px;
 }
+
+    .article .articleMain {
+        max-width: 300px;
+    }
+
+    .article .articleImage {
+        width: 300px;
+        height: 160px;
+    }

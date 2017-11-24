@@ -18,6 +18,7 @@ document.querySelector('.sourceListContainer').innerHTML = sourceChooser.render(
 
 document.querySelector('.sourceList').addEventListener('click', (e) => {
     if (e.target.tagName != 'LI') return;
+    
     let sourceId = e.target.dataset.sourceId,
         resultSource = newsSourceStorage.find((elem) => elem.sourceId === sourceId),
         xhr,
@@ -25,6 +26,7 @@ document.querySelector('.sourceList').addEventListener('click', (e) => {
 
     if (resultSource) {
         articlesBox.addSource(resultSource.sourceArticles);
+
         return;
     } else {
         xhr = new XMLHttpRequest();
@@ -38,6 +40,7 @@ document.querySelector('.sourceList').addEventListener('click', (e) => {
                 sourceArticles: articles
             });
             document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+
             return;
         }
     }

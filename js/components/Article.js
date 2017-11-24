@@ -7,7 +7,7 @@ export default class Article {
 		this.sourceId = sourceObj.id;
 		this.title = title;
 		this.url = url;
-		this.imgUrl = imgUrl;
+		this.imgUrl = imgUrl || '../../img/no-image.png';
 	}
 
 	static dummyArticle () {
