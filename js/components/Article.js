@@ -12,7 +12,7 @@ export default class Article {
 	static dummyArticle () {
 		return new Article ("Alex Hur", "Dummy description", "2017-11-22T16:54:35Z",
 			"Dummy SourceName", "Dummy Title", "https://vk.com/",
-			"https://pp.userapi.com/c638928/v638928530/5aae1/HVrq1cnroMc.jpg");
+			"http://files2.najox.com/pictures/spongebob_fights_with_fish.jpg");
 	}
 
 	render() {
@@ -37,7 +37,7 @@ export default class Article {
 	}
 }
 
-formatDate (dateStr) => {
+function formatDate (dateStr) {
 	let date = new Date(dateStr);
 	return date.toLocaleString();
 }

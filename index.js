@@ -1,52 +1,17 @@
-(function() { 
-//	import Article from './js/components/Article.js';
+import {API_KEY, ARTICLES_ADDING_NUMBER, ARTICLES_DEFAULT_NUMBER, NEWS_SOURCES} from './js/config.js';
+import ArticlesBox from './js/components/ArticlesBox.js';
+import Article from './js/components/Article.js';
 
-class Article {
-	constructor(author, description, publishDate, sourceName, title, url, imgUrl) {
-		this.author = author;
-		this.description = description;
-		this.publishDate = publishDate;
-		this.sourceName = sourceName;
-		this.title = title;
-		this.url = url;
-		this.imgUrl = imgUrl;
-	}
+let articlesArray = [];
 
-	static dummyArticle () {
-		return new Article ("Alex Hur", "Dummy description", "2017-11-22T16:54:35Z" , "Dummy SourceName", "Dummy Title", 
-			"https://vk.com/", "https://pp.userapi.com/c638928/v638928530/5aae1/HVrq1cnroMc.jpg");
-	}
-
-	render() {
-		return `<div class="article">
-				<img class="articleImage" src="${this.imgUrl}" alt="${this.title}">
-				<div class="articleMain">
-					<a class="articleUrl" href="${this.url}">
-						<h3 class="articleTitle">${this.title}</h3>
-						<h4 class="articleSource">${this.sourceName}</h4>
-					</a>
-					<div class="articleDescription">
-						${this.description}
-					</div>
-					<dl class="publishInfo">
-						<dt>Author:</dt>
-						<dd>${this.author}</dd>
-						<dt>Puplish date:</dt>
-						<dd>${formatDate(this.publishDate)}</dd>
-					</dl>
-				</div>
-			</div>`
-	}
+for (let i = 0; i < 100; i++) {
+    articlesArray.push(Article.dummyArticle())
 }
 
-function formatDate (dateStr) {
-	let date = new Date(dateStr);
-	return date.toLocaleString();
-}
+let articlesBox = new ArticlesBox(articlesArray, ARTICLES_DEFAULT_NUMBER, ARTICLES_ADDING_NUMBER);
 
-
-let tmpArticle = Article.dummyArticle();
-document.querySelector('.articlesContainer').innerHTML += tmpArticle.render();
-document.querySelector('.articlesContainer').innerHTML += tmpArticle.render();
-document.querySelector('.articlesContainer').innerHTML += tmpArticle.render();
-})();
+document.querySelector('.mainContainer').innerHTML = articlesBox.render();
+document.querySelector('.dummyButton').addEventListener('click', ()=> {
+    articlesBox.addArticles();
+    document.querySelector('.mainContainer').innerHTML = articlesBox.render();
+})
