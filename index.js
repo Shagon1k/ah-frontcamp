@@ -13,40 +13,50 @@ let sourcesArray = [],
 
 NEWS_SOURCES.forEach((source) => {sourcesArray.push(new Source(source))});
 sourceChooser = new SourceChooser(sourcesArray);
-articlesBox = new ArticlesBox(ARTICLES_DEFAULT_NUMBER, ARTICLES_ADDING_NUMBER);
 document.querySelector('.sourceListContainer').innerHTML = sourceChooser.render();
+
+articlesBox = new ArticlesBox(ARTICLES_DEFAULT_NUMBER, ARTICLES_ADDING_NUMBER);
 
 document.querySelector('.sourceList').addEventListener('click', (e) => {
     if (e.target.tagName != 'LI') return;
-    
-    let sourceId = e.target.dataset.sourceId,
-        resultSource = newsSourceStorage.find((elem) => elem.sourceId === sourceId),
+
+    let selectedSourceId = e.target.dataset.sourceId,
+    	selectedSourceIsActive = e.target.dataset.sourceActive,
+        resultSource,
         xhr,
         articles;
 
-    if (resultSource) {
-        articlesBox.addSource(resultSource.sourceArticles);
+    if (selectedSourceIsActive === "false") {
+    	e.target.dataset.sourceActive = "true";
+    	e.target.classList.toggle('activeSource');
+    	resultSource = newsSourceStorage.find((elem) => elem.sourceId === selectedSourceId);
 
-        return;
+    	if (resultSource) {
+    	    articlesBox.addSource(resultSource.sourceArticles);
+			document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+    	} else {
+    	    xhr = new XMLHttpRequest();
+    	    xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${selectedSourceId}&apiKey=${API_KEY}`);
+    	    xhr.send();
+    	    xhr.onload = function() {
+    	        articles = JSON.parse(this.responseText).articles;
+    	        articlesBox.addSource(articles);
+    	        newsSourceStorage.push({
+    	            sourceId: selectedSourceId,
+    	            sourceArticles: articles
+    	        });
+    	        document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+    	    }
+    	}
+
     } else {
-        xhr = new XMLHttpRequest();
-        xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${e.target.dataset.sourceId}&apiKey=${API_KEY}`);
-        xhr.send();
-        xhr.onload = function() {
-            articles = JSON.parse(this.responseText).articles;
-            articlesBox.addSource(articles);
-            newsSourceStorage.push({
-                sourceId: sourceId,
-                sourceArticles: articles
-            });
-            document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
-
-            return;
-        }
+    	e.target.dataset.sourceActive = "false";
+    	e.target.classList.toggle('activeSource');
+    	articlesBox.removeSource(selectedSourceId);
+    	document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
     }
 
 })
-
 
 
 document.querySelector('.dummyButton').addEventListener('click', () => {

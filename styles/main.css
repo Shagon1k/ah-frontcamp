@@ -35,6 +35,10 @@ button {
     margin: 5px 20px 5px 0;
     cursor: pointer;
 }
+    .sourceList .sourceItem.activeSource {
+        color: red;
+    }
+
 
 .articlesBox {
     display: flex;
@@ -54,7 +58,4 @@ button {
         max-width: 300px;
     }
 
-    .article .articleImage {
-        width: 300px;
-        height: 160px;
-    }
+    
