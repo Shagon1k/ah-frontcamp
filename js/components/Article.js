@@ -18,7 +18,7 @@ export default class Article {
 
 	render() {
 		return `<div class="article">
-					<a href="${this.url}" class="articleImage" style="background-image:url(${this.imgUrl}); width:300px; height:160px; background-position:center;"></a>
+					<a href="${this.url}" class="articleImage" style="background-image:url(${this.imgUrl}); background-position:center;"></a>
 					<div class="articleMain">
 						<a class="articleUrl" href="${this.url}">
 							<h3 class="articleTitle">${this.title}</h3>

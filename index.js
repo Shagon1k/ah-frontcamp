@@ -8,7 +8,8 @@ let sourcesArray = [],
     articlesArray = [],
     sourceChooser,
     articlesBox,
-    newsSourceStorage = [];         //will store already downloaded information
+    //ЗАМЕНИТЬ НА МАП!! И РЕЛОАДАТЬ ЕГО КАЖДЫЕ 2 МИНУТЫ
+    newsSourceStorage = new Map();         //will store already downloaded information
 
 
 NEWS_SOURCES.forEach((source) => {sourcesArray.push(new Source(source))});
@@ -29,10 +30,10 @@ document.querySelector('.sourceList').addEventListener('click', (e) => {
     if (selectedSourceIsActive === "false") {
     	e.target.dataset.sourceActive = "true";
     	e.target.classList.toggle('activeSource');
-    	resultSource = newsSourceStorage.find((elem) => elem.sourceId === selectedSourceId);
+    	resultSource = newsSourceStorage.get(selectedSourceId);
 
     	if (resultSource) {
-    	    articlesBox.addSource(resultSource.sourceArticles);
+    	    articlesBox.addSource(resultSource);
 			document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
     	} else {
     	    xhr = new XMLHttpRequest();
@@ -41,14 +42,10 @@ document.querySelector('.sourceList').addEventListener('click', (e) => {
     	    xhr.onload = function() {
     	        articles = JSON.parse(this.responseText).articles;
     	        articlesBox.addSource(articles);
-    	        newsSourceStorage.push({
-    	            sourceId: selectedSourceId,
-    	            sourceArticles: articles
-    	        });
+    	        newsSourceStorage.set(selectedSourceId, articles);
     	        document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
     	    }
     	}
-
     } else {
     	e.target.dataset.sourceActive = "false";
     	e.target.classList.toggle('activeSource');
