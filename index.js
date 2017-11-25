@@ -8,15 +8,15 @@ let sourcesArray = [],
     articlesArray = [],
     sourceChooser,
     articlesBox,
-    //ЗАМЕНИТЬ НА МАП!! И РЕЛОАДАТЬ ЕГО КАЖДЫЕ 2 МИНУТЫ
-    newsSourceStorage = new Map();         //will store already downloaded information
+    newsSourceStorage = new Map(),         //will store already downloaded information
+    showMoreButton = document.querySelector('.showMoreButton');
 
-
+//
 NEWS_SOURCES.forEach((source) => {sourcesArray.push(new Source(source))});
 sourceChooser = new SourceChooser(sourcesArray);
 document.querySelector('.sourceListContainer').innerHTML = sourceChooser.render();
 
-articlesBox = new ArticlesBox(ARTICLES_DEFAULT_NUMBER, ARTICLES_ADDING_NUMBER);
+articlesBox = new ArticlesBox(ARTICLES_ADDING_NUMBER);
 
 document.querySelector('.sourceList').addEventListener('click', (e) => {
     if (e.target.tagName != 'LI') return;
@@ -27,14 +27,15 @@ document.querySelector('.sourceList').addEventListener('click', (e) => {
         xhr,
         articles;
 
-    if (selectedSourceIsActive === "false") {
-    	e.target.dataset.sourceActive = "true";
+    if (selectedSourceIsActive === 'false') {
+    	e.target.dataset.sourceActive = 'true';
     	e.target.classList.toggle('activeSource');
     	resultSource = newsSourceStorage.get(selectedSourceId);
 
     	if (resultSource) {
     	    articlesBox.addSource(resultSource);
 			document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+			showMoreButton.classList.remove('hide');
     	} else {
     	    xhr = new XMLHttpRequest();
     	    xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${selectedSourceId}&apiKey=${API_KEY}`);
@@ -44,10 +45,11 @@ document.querySelector('.sourceList').addEventListener('click', (e) => {
     	        articlesBox.addSource(articles);
     	        newsSourceStorage.set(selectedSourceId, articles);
     	        document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+    	        showMoreButton.classList.remove('hide');
     	    }
     	}
     } else {
-    	e.target.dataset.sourceActive = "false";
+    	e.target.dataset.sourceActive = 'false';
     	e.target.classList.toggle('activeSource');
     	articlesBox.removeSource(selectedSourceId);
     	document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
@@ -55,8 +57,20 @@ document.querySelector('.sourceList').addEventListener('click', (e) => {
 
 })
 
+window.onscroll = () => {
+	if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 80) { 
+		showMore();
+	}
+};
 
-document.querySelector('.dummyButton').addEventListener('click', () => {
-    articlesBox.increaseRenderedArticles();
+showMoreButton.addEventListener('click', showMore);
+
+function showMore() {
+	if (articlesBox.fullyShowed()) {
+		showMoreButton.classList.add('hide');
+	} else {
+		showMoreButton.classList.remove('hide');
+	}
+	articlesBox.increaseRenderedArticles();
     document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
-})
+}

@@ -1,10 +1,10 @@
 import Article from './Article.js';
 
 export default class ArticlesBox {
-    constructor(articlesDefaultNumber = 12, articlesAddingNumber = 3) {
+    constructor(articlesAddingNumber = 3) {
         this.articlesArray = [];
         this._articlesAddingNumber = articlesAddingNumber;
-        this._articlesDisplayedNumber = articlesDefaultNumber;
+        this._articlesDisplayedNumber = 0;
     }
 
     get articlesAddingNumber() {
@@ -18,6 +18,10 @@ export default class ArticlesBox {
     }
 
     increaseRenderedArticles() {
+        if (!this.articlesArray.length) {
+            return;
+        }
+
         if ((this._articlesDisplayedNumber + this._articlesAddingNumber) > this.articlesArray.length) {
             this._articlesDisplayedNumber = this.articlesArray.length;
         } else {
@@ -30,6 +34,10 @@ export default class ArticlesBox {
 
         if (this.articlesArray.find((e) => e.sourceId === articles[0].source.id)) return;
 
+        if (this._articlesDisplayedNumber === 0) {
+            this._articlesDisplayedNumber += this._articlesAddingNumber;
+        }
+
         articles.forEach((elem) => {
             addedArticles.push(new Article(elem.author, elem.description, elem.publishedAt, elem.source, elem.title, elem.url, elem.urlToImage));
         })
@@ -38,7 +46,11 @@ export default class ArticlesBox {
     }
 
     removeSource(sourceId) {
-        this.articlesArray = this.articlesArray.filter((value)=>value.sourceId != sourceId);
+        this.articlesArray = this.articlesArray.filter((value) => value.sourceId != sourceId);
+    }
+
+    fullyShowed() {
+        return this._articlesDisplayedNumber === this.articlesArray.length;
     }
 
     render() {
