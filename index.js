@@ -42,7 +42,10 @@ document.querySelector('.sourceList').addEventListener('click', e => {
     		pageOverlay.classList.remove('hide');
     		requestSource(selectedSourceId)
     			.then(response => {
-    				articles = JSON.parse(response).articles;
+    				return response.json();
+    			})
+    			.then(response => {
+    				articles = response.articles;
     				articlesBox.addSource(articles);
     	    	    newsSourceStorage.set(selectedSourceId, articles);
     	    	    document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();

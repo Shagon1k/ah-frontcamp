@@ -20,12 +20,13 @@ header {
     border-bottom: 1px solid black;
 }
     header .sourceList {
+        font-size: 18px;
         text-align: center;
     }
    
     .sourceList .sourceItem {
         display: inline-block;
-        width: 75px;
+        width: 90px;
         vertical-align: middle;
         margin: 3px 20px 3px 0;
         cursor: pointer;
