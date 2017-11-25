@@ -1,52 +1,85 @@
-(function() { 
-//	import Article from './js/components/Article.js';
+import * as CONFIG from './js/config.js';
+import Article from './js/components/Article.js';
+import ArticlesBox from './js/components/ArticlesBox.js';
+import Source from './js/components/Source.js';
+import SourceChooser from './js/components/SourceChooser.js';
+import requestSource from './js/requestSource.js';
 
-class Article {
-	constructor(author, description, publishDate, sourceName, title, url, imgUrl) {
-		this.author = author;
-		this.description = description;
-		this.publishDate = publishDate;
-		this.sourceName = sourceName;
-		this.title = title;
-		this.url = url;
-		this.imgUrl = imgUrl;
-	}
+let sourcesArray = [],
+    articlesArray = [],
+    sourceChooser,
+    articlesBox,
+    newsSourceStorage = new Map(),         //will store already downloaded information
+    showMoreButton = document.querySelector('.showMoreButton'),
+    pageOverlay = document.querySelector('#overlay');
 
-	static dummyArticle () {
-		return new Article ("Alex Hur", "Dummy description", "2017-11-22T16:54:35Z" , "Dummy SourceName", "Dummy Title", 
-			"https://vk.com/", "https://pp.userapi.com/c638928/v638928530/5aae1/HVrq1cnroMc.jpg");
-	}
 
-	render() {
-		return `<div class="article">
-				<img class="articleImage" src="${this.imgUrl}" alt="${this.title}">
-				<div class="articleMain">
-					<a class="articleUrl" href="${this.url}">
-						<h3 class="articleTitle">${this.title}</h3>
-						<h4 class="articleSource">${this.sourceName}</h4>
-					</a>
-					<div class="articleDescription">
-						${this.description}
-					</div>
-					<dl class="publishInfo">
-						<dt>Author:</dt>
-						<dd>${this.author}</dd>
-						<dt>Puplish date:</dt>
-						<dd>${formatDate(this.publishDate)}</dd>
-					</dl>
-				</div>
-			</div>`
+CONFIG.NEWS_SOURCES.forEach(source => {sourcesArray.push(new Source(source))});
+sourceChooser = new SourceChooser(sourcesArray);
+document.querySelector('.sourceListContainer').innerHTML = sourceChooser.render();
+
+articlesBox = new ArticlesBox(CONFIG.ARTICLES_ADDING_NUMBER);
+
+document.querySelector('.sourceList').addEventListener('click', e => {
+    if (e.target.tagName != 'LI') return;
+
+    let selectedSourceId = e.target.dataset.sourceId,
+    	selectedSourceIsActive = e.target.dataset.sourceActive,
+        resultSource,
+        xhr,
+        articles;
+
+    if (selectedSourceIsActive === 'false') {
+    	e.target.dataset.sourceActive = 'true';
+    	e.target.classList.toggle('activeSource');
+    	resultSource = newsSourceStorage.get(selectedSourceId);
+
+    	if (resultSource) {
+    	    articlesBox.addSource(resultSource);
+			document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+			showMoreButton.classList.remove('hide');
+    	} else {
+    		pageOverlay.classList.remove('hide');
+    		requestSource(selectedSourceId)
+    			.then(response => {
+    				return response.json();
+    			})
+    			.then(response => {
+    				articles = response.articles;
+    				articlesBox.addSource(articles);
+    	    	    newsSourceStorage.set(selectedSourceId, articles);
+    	    	    document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+    	    	    showMoreButton.classList.remove('hide');
+    	    	    pageOverlay.classList.add('hide');
+    			})
+    			.catch(error => {
+    				alert('Something went wrong');
+    				console.log(error);
+    			})
+    	}
+    } else {
+    	e.target.dataset.sourceActive = 'false';
+    	e.target.classList.toggle('activeSource');
+    	articlesBox.removeSource(selectedSourceId);
+    	document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+    }
+
+})
+
+window.onscroll = () => {
+	if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 80) { 
+		showMore();
 	}
+};
+
+showMoreButton.addEventListener('click', showMore);
+
+function showMore() {
+	if (articlesBox.fullyShowed()) {
+		showMoreButton.classList.add('hide');
+	} else {
+		showMoreButton.classList.remove('hide');
+	}
+	articlesBox.increaseRenderedArticles();
+    document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
 }
-
-function formatDate (dateStr) {
-	let date = new Date(dateStr);
-	return date.toLocaleString();
-}
-
-
-let tmpArticle = Article.dummyArticle();
-document.querySelector('.articlesContainer').innerHTML += tmpArticle.render();
-document.querySelector('.articlesContainer').innerHTML += tmpArticle.render();
-document.querySelector('.articlesContainer').innerHTML += tmpArticle.render();
-})();

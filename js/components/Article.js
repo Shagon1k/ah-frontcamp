@@ -1,43 +1,43 @@
 export default class Article {
-	constructor(author, description, publishDate, sourceName, title, url, imgUrl) {
-		this.author = author;
+	constructor(author, description, publishDate, sourceObj, title, url, imgUrl) {
+		this.author = author || 'no author';
 		this.description = description;
 		this.publishDate = publishDate;
-		this.sourceName = sourceName;
+		this.sourceName = sourceObj.name; 
+		this.sourceId = sourceObj.id;
 		this.title = title;
 		this.url = url;
-		this.imgUrl = imgUrl;
+		this.imgUrl = imgUrl || '../../img/no-image.png';
 	}
 
 	static dummyArticle () {
 		return new Article ("Alex Hur", "Dummy description", "2017-11-22T16:54:35Z",
-			"Dummy SourceName", "Dummy Title", "https://vk.com/",
-			"https://pp.userapi.com/c638928/v638928530/5aae1/HVrq1cnroMc.jpg");
+			{name: "Dummy SourceName", id: "dummy-source-id"}, "Dummy Title", "https://vk.com/",
+			"http://files2.najox.com/pictures/spongebob_fights_with_fish.jpg");
 	}
 
 	render() {
 		return `<div class="article">
-				<img class="articleImage" src="${this.imgUrl}" alt="${this.title}">
-				<div class="articleMain">
-					<a class="articleUrl" href="${this.url}">
-						<h3 class="articleTitle">${this.title}</h3>
-						<h4 class="articleSource">${this.sourceName}</h4>
-					</a>
-					<div class="articleDescription">
-						${this.description}
+					<a href="${this.url}" class="articleImage" style="background-image:url(${this.imgUrl}); background-position:center;"></a>
+					<div class="articleMain">
+						<a class="articleUrl" href="${this.url}">
+							<h3 class="articleTitle">${this.title}</h3>
+						</a>
+						<div class="articleDescription">
+							${this.description}
+						</div>
+						<dl class="publishInfo">
+							<dt>Author:</dt>
+							<dd>${this.author}</dd>
+							<dt>Puplish date:</dt>
+							<dd>${formatDate(this.publishDate)}</dd>
+						</dl>
 					</div>
-					<dl class="publishInfo">
-						<dt>Author:</dt>
-						<dd>${this.author}</dd>
-						<dt>Puplish date:</dt>
-						<dd>${formatDate(this.publishDate)}</dd>
-					</dl>
-				</div>
-			</div>`
+				</div>`
 	}
 }
 
-formatDate (dateStr) => {
+function formatDate (dateStr) {
 	let date = new Date(dateStr);
 	return date.toLocaleString();
 }

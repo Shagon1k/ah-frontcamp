@@ -44,6 +44,10 @@ table {
 * {
     outline: 0;
 }
+a, u {
+    text-decoration: none;
+    color: inherit;
+}
 
 .clearfix::after {
    content: "";
