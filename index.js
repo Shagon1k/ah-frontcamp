@@ -1,24 +1,26 @@
-import {API_KEY, ARTICLES_ADDING_NUMBER, ARTICLES_DEFAULT_NUMBER, NEWS_SOURCES} from './js/config.js';
+import * as CONFIG from './js/config.js';
 import Article from './js/components/Article.js';
 import ArticlesBox from './js/components/ArticlesBox.js';
 import Source from './js/components/Source.js';
 import SourceChooser from './js/components/SourceChooser.js';
+import requestSource from './js/requestSource.js';
 
 let sourcesArray = [],
     articlesArray = [],
     sourceChooser,
     articlesBox,
     newsSourceStorage = new Map(),         //will store already downloaded information
-    showMoreButton = document.querySelector('.showMoreButton');
+    showMoreButton = document.querySelector('.showMoreButton'),
+    pageOverlay = document.querySelector('#overlay');
 
-//
-NEWS_SOURCES.forEach((source) => {sourcesArray.push(new Source(source))});
+
+CONFIG.NEWS_SOURCES.forEach(source => {sourcesArray.push(new Source(source))});
 sourceChooser = new SourceChooser(sourcesArray);
 document.querySelector('.sourceListContainer').innerHTML = sourceChooser.render();
 
-articlesBox = new ArticlesBox(ARTICLES_ADDING_NUMBER);
+articlesBox = new ArticlesBox(CONFIG.ARTICLES_ADDING_NUMBER);
 
-document.querySelector('.sourceList').addEventListener('click', (e) => {
+document.querySelector('.sourceList').addEventListener('click', e => {
     if (e.target.tagName != 'LI') return;
 
     let selectedSourceId = e.target.dataset.sourceId,
@@ -37,16 +39,20 @@ document.querySelector('.sourceList').addEventListener('click', (e) => {
 			document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
 			showMoreButton.classList.remove('hide');
     	} else {
-    	    xhr = new XMLHttpRequest();
-    	    xhr.open('GET', `https://newsapi.org/v2/top-headlines?sources=${selectedSourceId}&apiKey=${API_KEY}`);
-    	    xhr.send();
-    	    xhr.onload = function() {
-    	        articles = JSON.parse(this.responseText).articles;
-    	        articlesBox.addSource(articles);
-    	        newsSourceStorage.set(selectedSourceId, articles);
-    	        document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
-    	        showMoreButton.classList.remove('hide');
-    	    }
+    		pageOverlay.classList.remove('hide');
+    		requestSource(selectedSourceId)
+    			.then(response => {
+    				articles = JSON.parse(response).articles;
+    				articlesBox.addSource(articles);
+    	    	    newsSourceStorage.set(selectedSourceId, articles);
+    	    	    document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+    	    	    showMoreButton.classList.remove('hide');
+    	    	    pageOverlay.classList.add('hide');
+    			})
+    			.catch(error => {
+    				alert('Something went wrong');
+    				console.log(error);
+    			})
     	}
     } else {
     	e.target.dataset.sourceActive = 'false';

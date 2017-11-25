@@ -1,9 +1,9 @@
 export default class Article {
 	constructor(author, description, publishDate, sourceObj, title, url, imgUrl) {
-		this.author = author;
+		this.author = author || 'no author';
 		this.description = description;
 		this.publishDate = publishDate;
-		this.sourceName = sourceObj.name;
+		this.sourceName = sourceObj.name; 
 		this.sourceId = sourceObj.id;
 		this.title = title;
 		this.url = url;

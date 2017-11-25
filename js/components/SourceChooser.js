@@ -6,7 +6,7 @@ export default class SourceChooser {
     render() {
         let sourcesStringTemplate = '';
 
-        this.sourceArr.forEach((source) => {sourcesStringTemplate += source.render()});
+        this.sourceArr.forEach(source => {sourcesStringTemplate += source.render()});
 
         return `<ul class="sourceList">
                     ${sourcesStringTemplate}

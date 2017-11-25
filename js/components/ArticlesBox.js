@@ -32,13 +32,13 @@ export default class ArticlesBox {
     addSource(articles) {
         let addedArticles = [];
 
-        if (this.articlesArray.find((e) => e.sourceId === articles[0].source.id)) return;
+        if (this.articlesArray.find(e => e.sourceId === articles[0].source.id)) return;
 
         if (this._articlesDisplayedNumber === 0) {
             this._articlesDisplayedNumber += this._articlesAddingNumber;
         }
 
-        articles.forEach((elem) => {
+        articles.forEach(elem => {
             addedArticles.push(new Article(elem.author, elem.description, elem.publishedAt, elem.source, elem.title, elem.url, elem.urlToImage));
         })
 
@@ -46,7 +46,7 @@ export default class ArticlesBox {
     }
 
     removeSource(sourceId) {
-        this.articlesArray = this.articlesArray.filter((value) => value.sourceId != sourceId);
+        this.articlesArray = this.articlesArray.filter(value => value.sourceId != sourceId);
     }
 
     fullyShowed() {
