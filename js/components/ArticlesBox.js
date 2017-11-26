@@ -17,6 +17,10 @@ export default class ArticlesBox {
         }
     }
 
+    get articlesDisplayedNumber() {
+        return this._articlesDisplayedNumber;
+    }
+
     increaseRenderedArticles() {
         if (!this.articlesArray.length) {
             return;
@@ -40,13 +44,18 @@ export default class ArticlesBox {
 
         articles.forEach(elem => {
             addedArticles.push(new Article(elem.author, elem.description, elem.publishedAt, elem.source, elem.title, elem.url, elem.urlToImage));
-        })
 
+        })
         this.articlesArray = this.articlesArray.concat(addedArticles);
+
+        this.articlesArray.sort((art1, art2) => art1.publishDate < art2.publishDate ? 1 : -1);
     }
 
     removeSource(sourceId) {
         this.articlesArray = this.articlesArray.filter(value => value.sourceId != sourceId);
+        if (this.articlesArray.length < this._articlesDisplayedNumber) {
+            this._articlesDisplayedNumber = this.articlesArray.length;
+        }
     }
 
     fullyShowed() {

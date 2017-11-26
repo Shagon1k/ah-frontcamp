@@ -62,6 +62,9 @@ document.querySelector('.sourceList').addEventListener('click', e => {
     	e.target.classList.toggle('activeSource');
     	articlesBox.removeSource(selectedSourceId);
     	document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+    	if (articlesBox.articlesDisplayedNumber === 0) {
+    		showMoreButton.classList.add('hide');
+    	}
     }
 
 })

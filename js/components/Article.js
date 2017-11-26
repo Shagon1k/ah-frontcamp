@@ -2,12 +2,12 @@ export default class Article {
 	constructor(author, description, publishDate, sourceObj, title, url, imgUrl) {
 		this.author = author || 'no author';
 		this.description = description;
-		this.publishDate = publishDate;
+		this.publishDate = new Date(publishDate);
 		this.sourceName = sourceObj.name; 
 		this.sourceId = sourceObj.id;
 		this.title = title;
 		this.url = url;
-		this.imgUrl = imgUrl || '../../img/no-image.png';
+		this.imgUrl = imgUrl || 'https://i.imgur.com/LHZLUVp.png';
 	}
 
 	static dummyArticle () {
@@ -30,14 +30,9 @@ export default class Article {
 							<dt>Author:</dt>
 							<dd>${this.author}</dd>
 							<dt>Puplish date:</dt>
-							<dd>${formatDate(this.publishDate)}</dd>
+							<dd>${this.publishDate.toLocaleString()}</dd>
 						</dl>
 					</div>
 				</div>`
 	}
-}
-
-function formatDate (dateStr) {
-	let date = new Date(dateStr);
-	return date.toLocaleString();
 }
