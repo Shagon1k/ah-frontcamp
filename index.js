@@ -14,9 +14,8 @@ let sourcesArray = [],
     pageOverlay = document.querySelector('#overlay');
 
 
-CONFIG.NEWS_SOURCES.forEach(source => {sourcesArray.push(new Source(source))});
-sourceChooser = new SourceChooser(sourcesArray);
-document.querySelector('.sourceListContainer').innerHTML = sourceChooser.render();
+CONFIG.NEWS_SOURCES.forEach(source => {sourcesArray.push(Source(source))});
+document.querySelector('.sourceListContainer').innerHTML = SourceChooser(sourcesArray);
 
 articlesBox = new ArticlesBox(CONFIG.ARTICLES_ADDING_NUMBER);
 
@@ -70,7 +69,7 @@ document.querySelector('.sourceList').addEventListener('click', e => {
 })
 
 window.onscroll = () => {
-	if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 80) { 
+	if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 80) {
 		showMore();
 	}
 };

@@ -3,17 +3,11 @@ export default class Article {
 		this.author = author || 'no author';
 		this.description = description;
 		this.publishDate = new Date(publishDate);
-		this.sourceName = sourceObj.name; 
+		this.sourceName = sourceObj.name;
 		this.sourceId = sourceObj.id;
 		this.title = title;
 		this.url = url;
 		this.imgUrl = imgUrl || 'https://i.imgur.com/LHZLUVp.png';
-	}
-
-	static dummyArticle () {
-		return new Article ("Alex Hur", "Dummy description", "2017-11-22T16:54:35Z",
-			{name: "Dummy SourceName", id: "dummy-source-id"}, "Dummy Title", "https://vk.com/",
-			"http://files2.najox.com/pictures/spongebob_fights_with_fish.jpg");
 	}
 
 	render() {
@@ -36,3 +30,25 @@ export default class Article {
 				</div>`
 	}
 }
+
+//export default function Article (author, description, publishDate, sourceObj, title, url, imgUrl) {
+//	let resAuthor = author || 'no author',
+//		resImgUrl = imgUrl || 'https://i.imgur.com/LHZLUVp.png';
+//	return `<div class="article">
+//					<a href="${url}" class="articleImage" style="background-image:url(${resImgUrl}); background-position:center;"></a>
+//					<div class="articleMain">
+//						<a class="articleUrl" href="${url}">
+//							<h3 class="articleTitle">${title}</h3>
+//						</a>
+//						<div class="articleDescription">
+//							${description}
+//						</div>
+//						<dl class="publishInfo">
+//							<dt>Author:</dt>
+//							<dd>${author}</dd>
+//							<dt>Puplish date:</dt>
+//							<dd>${publishDate.toLocaleString()}</dd>
+//						</dl>
+//					</div>
+//				</div>`
+//}

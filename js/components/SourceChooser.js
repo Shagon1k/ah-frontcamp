@@ -1,15 +1,8 @@
-export default class SourceChooser {
-    constructor(sourceArr) {
-        this.sourceArr = sourceArr;
-    }
+export default function SourceChooser (sourceArr) {
+    let sourcesStringTemplate = '';
+    sourceArr.forEach(source => {sourcesStringTemplate += source});
 
-    render() {
-        let sourcesStringTemplate = '';
-
-        this.sourceArr.forEach(source => {sourcesStringTemplate += source.render()});
-
-        return `<ul class="sourceList">
+    return `<ul class="sourceList">
                     ${sourcesStringTemplate}
                 </ul>`
-    }
 }
