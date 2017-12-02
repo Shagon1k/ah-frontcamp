@@ -71,6 +71,7 @@ header {
                 }
 
             .article .articleMain {
+                width: 90%;
                 padding: 5px;
             }
 

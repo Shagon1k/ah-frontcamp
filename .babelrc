@@ -1,4 +1,4 @@
 {
   "presets": ["env"],
-  "plugins": ["transform-es2015-modules-amd"]
+  "plugins": ["./babel-plugins/dataset-to-attributes.js", "transform-es2015-modules-amd"]
 }
