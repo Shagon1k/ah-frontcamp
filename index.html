@@ -14,7 +14,12 @@
 		<button class="showMoreButton hide">Show More</button>
 	</div>
 	<div id="overlay" class="hide"></div>
-	
-	<script src="index.js" type="module"></script>
+
+
+	<script src="node_modules/babel-polyfill/dist/polyfill.js"></script>
+	<script src="node_modules/whatwg-fetch/fetch.js"></script>
+
+	<script data-main="app" src="libs/require.js"></script>
+	<!--<script src="index.js" type="module"></script>-->
 </body>
 </html>

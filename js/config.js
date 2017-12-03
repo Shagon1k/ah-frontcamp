@@ -6,6 +6,6 @@ const NEWS_SOURCES = [{name: 'ABC News', id: 'abc-news'},
                         {name: 'CNN News', id: 'cnn'},
                         {name: 'IGN News', id: 'ign'},
                         {name: 'NBC News', id: 'nbc-news'},
-                        {name: 'News24', id: 'news24'}]
+                        {name: 'News24', id: 'news24'}];
 
 export {API_KEY, ARTICLES_ADDING_NUMBER, ARTICLES_DEFAULT_NUMBER, NEWS_SOURCES};
