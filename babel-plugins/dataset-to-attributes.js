@@ -3,7 +3,7 @@ module.exports = function({ types: t }) {
 	  visitor: {
 	    MemberExpression: function (path) {
 	    	if (path.node.object && path.node.object.type === "MemberExpression" && path.node.object.property.name === "dataset") {
-	    		let name = 'data-' + dasherize(path.node.property.name),
+	    		let name = 'data-' + toDashed(path.node.property.name),
 	    				argument = new t.stringLiteral(name);
 	    		//Check whether we set data or get it. If parent has "right" sibling, then its set.
 	    		if (path.parent.right) {
@@ -22,7 +22,7 @@ module.exports = function({ types: t }) {
 	  }
 	};
 
-	function dasherize(str) {
+	function toDashed(str) {
 		return str.replace(/[A-Z]/g, function(char, index) {
 			return (index !== 0 ? '-' : '') + char.toLowerCase();
 		});
