@@ -19,6 +19,9 @@ document.querySelector('.sourceListContainer').innerHTML = SourceChooser(sources
 
 articlesBox = new ArticlesBox(CONFIG.ARTICLES_ADDING_NUMBER);
 
+console.log('Remove me!');
+console.error('Dont remove me!');
+
 document.querySelector('.sourceList').addEventListener('click', e => {
     if (e.target.tagName != 'LI') return;
 
