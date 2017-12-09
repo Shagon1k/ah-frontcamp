@@ -7,7 +7,7 @@ export default class Article {
 		this.sourceId = sourceObj.id;
 		this.title = title;
 		this.url = url;
-		this.imgUrl = imgUrl || 'https://i.imgur.com/LHZLUVp.png';
+		this.imgUrl = imgUrl || '/images/no-image.png';  //'https://i.imgur.com/LHZLUVp.png'
 	}
 
 	render() {

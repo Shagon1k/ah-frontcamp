@@ -1,9 +1,12 @@
-import * as CONFIG from './config.js';
-import Article from './components/Article.js';
-import ArticlesBox from './components/ArticlesBox.js';
-import Source from './components/Source.js';
-import SourceChooser from './components/SourceChooser.js';
-import requestSource from './requestSource.js';
+import 'babel-polyfill';
+import 'whatwg-fetch';
+import * as CONFIG from './js/config.js';
+import Article from './js/components/Article.js';
+import ArticlesBox from './js/components/ArticlesBox.js';
+import Source from './js/components/Source.js';
+import SourceChooser from './js/components/SourceChooser.js';
+import requestSource from './js/requestSource.js';
+import './styles/main.scss';
 
 let sourcesArray = [],
     articlesArray = [],
@@ -20,7 +23,9 @@ document.querySelector('.sourceListContainer').innerHTML = SourceChooser(sources
 articlesBox = new ArticlesBox(CONFIG.ARTICLES_ADDING_NUMBER);
 
 console.log('Remove me!');
-console.error('Dont remove me!');
+if (process.env.NODE_ENV !== 'production') {
+    console.warn('Development mode');
+}
 
 document.querySelector('.sourceList').addEventListener('click', e => {
     if (e.target.tagName != 'LI') return;
