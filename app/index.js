@@ -6,6 +6,8 @@ import Source from './js/components/Source.js';
 import SourceChooser from './js/components/SourceChooser.js';
 import './styles/main.scss';
 
+import test from './test.json';
+
 let sourcesArray = [],
     articlesArray = [],
     sourceChooser,
@@ -23,6 +25,7 @@ articlesBox = new ArticlesBox(CONFIG.ARTICLES_ADDING_NUMBER);
 console.log('Remove me!');
 if (process.env.NODE_ENV !== 'production') {
     console.warn('Development mode');
+    console.warn('LOADED JSON: ', test);
 }
 
 document.querySelector('.sourceList').addEventListener('click', e => {
