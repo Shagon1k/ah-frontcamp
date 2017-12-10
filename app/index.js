@@ -1,9 +1,10 @@
-import * as CONFIG from './config.js';
-import Article from './components/Article.js';
-import ArticlesBox from './components/ArticlesBox.js';
-import Source from './components/Source.js';
-import SourceChooser from './components/SourceChooser.js';
-import requestSource from './requestSource.js';
+import 'babel-polyfill';
+import 'whatwg-fetch';
+import * as CONFIG from './js/config.js';
+import ArticlesBox from './js/components/ArticlesBox.js';
+import Source from './js/components/Source.js';
+import SourceChooser from './js/components/SourceChooser.js';
+import './styles/main.scss';
 
 let sourcesArray = [],
     articlesArray = [],
@@ -20,7 +21,9 @@ document.querySelector('.sourceListContainer').innerHTML = SourceChooser(sources
 articlesBox = new ArticlesBox(CONFIG.ARTICLES_ADDING_NUMBER);
 
 console.log('Remove me!');
-console.error('Dont remove me!');
+if (process.env.NODE_ENV !== 'production') {
+    console.warn('Development mode');
+}
 
 document.querySelector('.sourceList').addEventListener('click', e => {
     if (e.target.tagName != 'LI') return;
@@ -42,22 +45,27 @@ document.querySelector('.sourceList').addEventListener('click', e => {
 			showMoreButton.classList.remove('hide');
     	} else {
     		pageOverlay.classList.remove('hide');
-    		requestSource(selectedSourceId)
-    			.then(response => {
-    				return response.json();
-    			})
-    			.then(response => {
-    				articles = response.articles;
-    				articlesBox.addSource(articles);
-    	    	    newsSourceStorage.set(selectedSourceId, articles);
-    	    	    document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
-    	    	    showMoreButton.classList.remove('hide');
-    	    	    pageOverlay.classList.add('hide');
-    			})
-    			.catch(error => {
-    				alert('Something went wrong');
-    				console.log(error);
-    			})
+            import(/* webpackChunkName: "request" */ './js/requestSource.js').then(module => {
+                
+                let requestSource = module.default;
+
+                requestSource(selectedSourceId)
+                    .then(response => {
+                    	return response.json();
+                    })
+                    .then(response => {
+                    	articles = response.articles;
+                    	articlesBox.addSource(articles);
+                            newsSourceStorage.set(selectedSourceId, articles);
+                            document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+                            showMoreButton.classList.remove('hide');
+                            pageOverlay.classList.add('hide');
+                    })
+                    .catch(error => {
+                    	alert('Something went wrong');
+                    	console.log(error);
+                    })
+            });
     	}
     } else {
     	e.target.dataset.sourceActive = 'false';
@@ -68,7 +76,6 @@ document.querySelector('.sourceList').addEventListener('click', e => {
     		showMoreButton.classList.add('hide');
     	}
     }
-
 })
 
 window.onscroll = () => {
