@@ -12,6 +12,10 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
     module: {
         rules: [
             {
+                test: /\.json/,
+                use: ['json-loader', 'json-number-attr-remove']
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
@@ -24,6 +28,11 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
                 })
             }
         ]
+    },
+    resolveLoader: {
+        alias: {
+            'json-number-attr-remove': path.join(__dirname, './utils/json-number-attr-remove-loader.js') 
+        }
     },
     plugins: [
         new ExtractTextPlugin('style.css')

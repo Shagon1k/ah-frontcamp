@@ -4,5 +4,5 @@
 			modules: false
 		}]
 	],
-	"plugins": ["syntax-dynamic-import", "./babel-plugins/remove-consolelog.js", "./babel-plugins/dataset-to-attributes.js"]
+	"plugins": ["syntax-dynamic-import", "./utils/babel-plugins/remove-consolelog.js", "./utils/babel-plugins/dataset-to-attributes.js"]
 }
