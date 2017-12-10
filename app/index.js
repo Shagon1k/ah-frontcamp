@@ -1,11 +1,9 @@
 import 'babel-polyfill';
 import 'whatwg-fetch';
 import * as CONFIG from './js/config.js';
-import Article from './js/components/Article.js';
 import ArticlesBox from './js/components/ArticlesBox.js';
 import Source from './js/components/Source.js';
 import SourceChooser from './js/components/SourceChooser.js';
-import requestSource from './js/requestSource.js';
 import './styles/main.scss';
 
 let sourcesArray = [],
@@ -47,22 +45,27 @@ document.querySelector('.sourceList').addEventListener('click', e => {
 			showMoreButton.classList.remove('hide');
     	} else {
     		pageOverlay.classList.remove('hide');
-    		requestSource(selectedSourceId)
-    			.then(response => {
-    				return response.json();
-    			})
-    			.then(response => {
-    				articles = response.articles;
-    				articlesBox.addSource(articles);
-    	    	    newsSourceStorage.set(selectedSourceId, articles);
-    	    	    document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
-    	    	    showMoreButton.classList.remove('hide');
-    	    	    pageOverlay.classList.add('hide');
-    			})
-    			.catch(error => {
-    				alert('Something went wrong');
-    				console.log(error);
-    			})
+            import(/* webpackChunkName: "request" */ './js/requestSource.js').then(module => {
+                
+                let requestSource = module.default;
+
+                requestSource(selectedSourceId)
+                    .then(response => {
+                    	return response.json();
+                    })
+                    .then(response => {
+                    	articles = response.articles;
+                    	articlesBox.addSource(articles);
+                            newsSourceStorage.set(selectedSourceId, articles);
+                            document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+                            showMoreButton.classList.remove('hide');
+                            pageOverlay.classList.add('hide');
+                    })
+                    .catch(error => {
+                    	alert('Something went wrong');
+                    	console.log(error);
+                    })
+            });
     	}
     } else {
     	e.target.dataset.sourceActive = 'false';
@@ -73,7 +76,6 @@ document.querySelector('.sourceList').addEventListener('click', e => {
     		showMoreButton.classList.add('hide');
     	}
     }
-
 })
 
 window.onscroll = () => {

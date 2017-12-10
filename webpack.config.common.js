@@ -6,15 +6,15 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
     output: {
         path: path.resolve(__dirname, 'build'),
         publicPath: '/build',
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        chunkFilename: '[name].bundle.js'
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
-                enforce: 'pre'
+                loader: 'babel-loader'
             },
             {
                 test: /\.scss$/,
