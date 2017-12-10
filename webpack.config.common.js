@@ -9,31 +9,23 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
         filename: 'bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                enforce: 'pre'
             },
             {
                 test: /\.scss$/,
-                use: [{
-                    loader: "style-loader"
-                }, {
-                    loader: "css-loader",
-                    options: {
-                        sourceMap: true
-                    }
-                }, {
-                    loader: "sass-loader",
-                    options: {
-                        sourceMap: true
-                    }
-                }]
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader', 'sass-loader']
+                })
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin('./build/style.css')
+        new ExtractTextPlugin('style.css')
     ]
  }
