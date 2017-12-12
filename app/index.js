@@ -49,7 +49,7 @@ document.querySelector('.sourceList').addEventListener('click', e => {
     	} else {
     		pageOverlay.classList.remove('hide');
             import(/* webpackChunkName: "request" */ './js/requestSource.js').then(module => {
-                
+
                 let requestSource = module.default;
 
                 requestSource(selectedSourceId)

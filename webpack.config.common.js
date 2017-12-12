@@ -5,7 +5,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
     entry: './app',
     output: {
         path: path.resolve(__dirname, './build'),
-        publicPath: './build/',
+        publicPath: '/build/',
         filename: 'bundle.js',
         chunkFilename: '[name].bundle.js'
     },
@@ -31,7 +31,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
     },
     resolveLoader: {
         alias: {
-            'json-number-attr-remove': path.join(__dirname, './utils/json-number-attr-remove-loader.js') 
+            'json-number-attr-remove': path.join(__dirname, './utils/json-number-attr-remove-loader.js')
         }
     },
     plugins: [
