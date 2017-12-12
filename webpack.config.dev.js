@@ -5,6 +5,9 @@ const path = require('path');
 
 module.exports = merge(common, {
 	devtool: 'inline-source-map',
+	output: {
+        publicPath: '/build/'
+    },
 	devServer: {
 		hot: true,
 		host: 'localhost',
