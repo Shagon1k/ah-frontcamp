@@ -11,15 +11,14 @@ import test from './test.json';
 
 //Main views initialization
 let viewsFactory = new ViewsFactory('globalContainer');
-viewsFactory.createHeader(CONFIG.MAIN_VIEWS_IDS.headerId);
-viewsFactory.createMainContainer(CONFIG.MAIN_VIEWS_IDS.mainContainerId);
-viewsFactory.createOverlay(CONFIG.MAIN_VIEWS_IDS.overlayId);
+viewsFactory.createHeader(CONFIG.MAIN_VIEWS_IDS.headerId).render();
+viewsFactory.createMainContainer(CONFIG.MAIN_VIEWS_IDS.mainContainerId).render();
+viewsFactory.createOverlay(CONFIG.MAIN_VIEWS_IDS.overlayId).render();
 
 let sourcesArray = [],
     articlesArray = [],
     sourceChooser,
-    articlesBox,
-    newsSourceStorage = new Map(),         
+    articlesBox,      
     showMoreButton = document.querySelector('.showMoreButton'),
     pageOverlay = document.getElementById(CONFIG.MAIN_VIEWS_IDS.overlayId);
 
@@ -38,7 +37,16 @@ document.querySelector('.sourceList').addEventListener('click', e => {
     if (selectedSourceIsActive === 'false') {
     	e.target.dataset.sourceActive = 'true';
     	e.target.classList.toggle('activeSource');
-        addArticlesProxy(selectedSourceId);
+        pageOverlay.classList.remove('hide');
+        import(/* webpackChunkName: "request" */ './js/requestSource.js').then(module => {
+            let requestSource = module.default;
+            requestSource(selectedSourceId).then(articles => {
+                articlesBox.addSource(articles);
+                document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+                showMoreButton.classList.remove('hide');
+                pageOverlay.classList.add('hide');
+            })    
+        });
     } else {
     	e.target.dataset.sourceActive = 'false';
     	e.target.classList.toggle('activeSource');
@@ -49,39 +57,6 @@ document.querySelector('.sourceList').addEventListener('click', e => {
     	}
     }
 });
-
-function addArticlesProxy(sourceId) {
-    let articles,
-        cachedSourceInfo = newsSourceStorage.get(sourceId);
-    if (cachedSourceInfo && (new Date - cachedSourceInfo.time) < CONFIG.INFO_CACHE_TIME) {
-        articlesBox.addSource(cachedSourceInfo.articles);
-        document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
-        showMoreButton.classList.remove('hide');
-    } else {
-        pageOverlay.classList.remove('hide');
-        import(/* webpackChunkName: "request" */ './js/requestSource.js').then(module => {
-            let requestSource = module.default;
-            requestSource(sourceId)
-                .then(response => {
-                    return response.json();
-                })
-                .then(response => {
-                    articlesBox.addSource(response.articles);
-                    newsSourceStorage.set(sourceId, {
-                            articles: response.articles,
-                            time: new Date()
-                        });
-                    document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
-                    showMoreButton.classList.remove('hide');
-                    pageOverlay.classList.add('hide');
-                })
-                .catch(error => {
-                    alert('Something went wrong');
-                    console.log(error);
-                })
-        });
-    }
-}
 
 window.onscroll = () => {
 	if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight + 80) {

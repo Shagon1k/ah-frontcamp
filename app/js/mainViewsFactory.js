@@ -1,5 +1,4 @@
 export default function ViewsFactory(globalContainerId) {
-	this.globalContainer = document.getElementById(globalContainerId);
 	this.viewsIds = {};
 
 	this.createHeader = function(headerId) {
@@ -7,25 +6,20 @@ export default function ViewsFactory(globalContainerId) {
 			return this.getView('headerId');
 		}
 		else {
-			this.viewsIds['headerId'] = headerId;
-			this.globalContainer.innerHTML += `<header id="${headerId}" class="${headerId}"></header>`;
+			this.viewsIds['headerId'] = new HeaderView(globalContainerId, headerId, headerId);
 			return this.getView('headerId');
 		}
 	}
 
 	this.createMainContainer = function(mainContId) {
-		if (!this.viewsIds.headerId) {
+		if (!this.viewsIds['headerId']) {
 			throw Error('No header element  presented!');
 		}
 		if (this.viewsIds['mainContId']) {
 			return this.getView('mainContId');
 		}
 		else {
-			this.viewsIds['mainContId'] = mainContId;
-			this.globalContainer.innerHTML += `<div id="${mainContId}" class="${mainContId}">
-													<div class="articleBoxContainer"></div>
-													<button class="showMoreButton hide">Show More</button>
-												</div>`;
+			this.viewsIds['mainContId'] = new MainContainerView(globalContainerId, mainContId, mainContId);
 			return this.getView('mainContId');
 		}
 	}
@@ -35,8 +29,7 @@ export default function ViewsFactory(globalContainerId) {
 			return this.getView('overlayId');
 		}
 		else {
-			this.viewsIds['overlayId'] = overlayId;
-			this.globalContainer.innerHTML += `<div id="${overlayId}" class="hide"></div>`;
+			this.viewsIds['overlayId'] = new OverlayView(globalContainerId, overlayId);
 			return this.getView('overlayId');
 		}
 	}
@@ -45,19 +38,45 @@ export default function ViewsFactory(globalContainerId) {
 ViewsFactory.prototype = {
 	getView: function(viewId) {
 		if (this.viewsIds[viewId]) {
-			return document.getElementById(viewId);
+			return this.viewsIds[viewId]
 		}
 		else {
 			throw Error('No view with such id');
 		}
-	},
-
-	fillView: function(viewId, stringHtml) {
-		let elem = this.getView(viewId);
-		elem.innerHTML += stringHtml;
 	}
 }
 
+class HeaderView {
+	constructor(globalContainerId, elemId, elemClass) {
+		this.elemId = elemId;
+		this.elemClass = elemClass;
+		this.globalContainer = document.getElementById(globalContainerId);
+	}
+	render() {
+		this.globalContainer.innerHTML += `<header id="${this.elemId}" class="${this.elemClass}"></header>`;
+	}
+}
 
-			
+class MainContainerView {
+	constructor(globalContainerId, elemId, elemClass) {
+		this.globalContainer = document.getElementById(globalContainerId);
+		this.elemId = elemId;
+		this.elemClass = elemClass;
+	}
+	render() {
+		this.globalContainer.innerHTML += `<div id="${this.elemId}" class="${this.elemClass}">
+													<div class="articleBoxContainer"></div>
+													<button class="showMoreButton hide">Show More</button>
+										</div>`;
+	}
+}
 
+class OverlayView {
+	constructor(globalContainerId, elemId) {
+		this.globalContainer = document.getElementById(globalContainerId);
+		this.elemId = elemId;
+	}
+	render() {
+		this.globalContainer.innerHTML += `<div id="${this.elemId}" class="hide"></div>`;
+	}
+}
