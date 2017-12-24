@@ -1,6 +1,7 @@
 import Article from './Article.js';
 
-export default class ArticlesBox {
+@noBitcoins
+class ArticlesBox {
     constructor(articlesAddingNumber = 3) {
         this.articlesArray = [];
         this._articlesAddingNumber = articlesAddingNumber;
@@ -58,6 +59,7 @@ export default class ArticlesBox {
         }
     }
 
+    @readonly
     fullyShowed() {
         return this._articlesDisplayedNumber === this.articlesArray.length;
     }
@@ -70,6 +72,33 @@ export default class ArticlesBox {
 
         for (let i = 0; i < numberToDisplay; i++) {
             articlesStringTemplate += this.articlesArray[i].render();
+        }
+
+        return `<div class="articlesBox">
+                    ${articlesStringTemplate}
+                </div>`
+    }
+}
+
+export default ArticlesBox;
+
+function readonly(target, key, desc) {
+    desc.writable = false;
+    return desc;
+}
+
+function noBitcoins(target, key) {
+    target.prototype.render = function() {
+        let articlesStringTemplate = '',
+            arrayToDisplay = this.articlesArray.filter(article => {
+                return !article.description.includes('bitcoin');
+            }),
+            numberToDisplay = this._articlesDisplayedNumber > arrayToDisplay.length ?
+                arrayToDisplay.length :
+                this._articlesDisplayedNumber;
+
+        for (let i = 0; i < numberToDisplay; i++) {
+            articlesStringTemplate += arrayToDisplay[i].render();
         }
 
         return `<div class="articlesBox">
