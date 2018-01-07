@@ -34,29 +34,18 @@ class ArticlesBox {
         }
     }
 
-    addSource(articles) {
-        let addedArticles = [];
-
-        if (this.articlesArray.find(e => e.sourceId === articles[0].source.id)) return;
-
+    updateArticles(articles) {
         if (this._articlesDisplayedNumber === 0) {
             this._articlesDisplayedNumber += this._articlesAddingNumber;
-        }
+        }     
 
-        articles.forEach(elem => {
-            addedArticles.push(new Article(elem.author, elem.description, elem.publishedAt, elem.source, elem.title, elem.url, elem.urlToImage));
+        this.articlesArray = articles;
 
-        })
-        this.articlesArray = this.articlesArray.concat(addedArticles);
-
-        this.articlesArray.sort((art1, art2) => art1.publishDate < art2.publishDate ? 1 : -1);
-    }
-
-    removeSource(sourceId) {
-        this.articlesArray = this.articlesArray.filter(value => value.sourceId != sourceId);
         if (this.articlesArray.length < this._articlesDisplayedNumber) {
             this._articlesDisplayedNumber = this.articlesArray.length;
         }
+
+        this.articlesArray.sort((art1, art2) => art1.publishedAt < art2.publishedAt ? 1 : -1);
     }
 
     @readonly
@@ -71,7 +60,9 @@ class ArticlesBox {
                 this._articlesDisplayedNumber;
 
         for (let i = 0; i < numberToDisplay; i++) {
-            articlesStringTemplate += this.articlesArray[i].render();
+            articlesStringTemplate += 
+                Article(this.articlesArray[i].author, this.articlesArray[i].description, this.articlesArray[i].publishedAt, this.articlesArray[i].source,
+                    this.articlesArray[i].title, this.articlesArray[i].url, this.articlesArray[i].urlToImage);
         }
 
         return `<div class="articlesBox">
@@ -98,7 +89,8 @@ function noBitcoins(target, key) {
                 this._articlesDisplayedNumber;
 
         for (let i = 0; i < numberToDisplay; i++) {
-            articlesStringTemplate += arrayToDisplay[i].render();
+            articlesStringTemplate += Article(this.articlesArray[i].author, this.articlesArray[i].description, this.articlesArray[i].publishedAt, this.articlesArray[i].source,
+                    this.articlesArray[i].title, this.articlesArray[i].url, this.articlesArray[i].urlToImage);
         }
 
         return `<div class="articlesBox">
