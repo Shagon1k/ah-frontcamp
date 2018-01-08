@@ -1,5 +1,6 @@
 import 'babel-polyfill';
 import 'whatwg-fetch';
+import createStore from '../utils/my-redux.js';
 import * as CONFIG from './js/config.js';
 import ViewsFactory from './js/mainViewsFactory.js';
 import ArticlesBox from './js/components/ArticlesBox.js';
@@ -18,15 +19,47 @@ viewsFactory.createOverlay(CONFIG.MAIN_VIEWS_IDS.overlayId).render();
 let sourcesArray = [],
     articlesArray = [],
     sourceChooser,
-    articlesBox,      
+    articlesBox,
     showMoreButton = document.querySelector('.showMoreButton'),
     pageOverlay = document.getElementById(CONFIG.MAIN_VIEWS_IDS.overlayId);
 
+function articlesReducer(state = [], action) {
+    switch (action.type) {
+        case 'ADD_NEWS':
+            return [...state, ...action.articles];
+        case 'REMOVE_NEWS':
+            return state.filter(value => value.source.id !== action.sourceId)
+        default:
+            return state
+    }
+}
+
+function newsAppReducer(state = {}, action) {
+    switch (action.type) {
+        case 'ADD_NEWS':
+            return {...state,
+                articles: articlesReducer(state.articles, action)
+            };
+        case 'REMOVE_NEWS':
+        return {...state,
+                articles: articlesReducer(state.articles, action)
+            };
+        default:
+            return state
+    }
+}
+
+let newsApp = createStore(newsAppReducer);
 
 CONFIG.NEWS_SOURCES.forEach(source => {sourcesArray.push(Source(source))});
 document.getElementById(CONFIG.MAIN_VIEWS_IDS.headerId).innerHTML = SourceChooser(sourcesArray);
 
 articlesBox = new ArticlesBox(CONFIG.ARTICLES_ADDING_NUMBER);
+
+newsApp.subscribe(()=> {
+    articlesBox.updateArticles(newsApp.getState().articles);
+    document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+})
 
 document.querySelector('.sourceList').addEventListener('click', e => {
     if (e.target.tagName != 'LI') return;
@@ -41,17 +74,21 @@ document.querySelector('.sourceList').addEventListener('click', e => {
         import(/* webpackChunkName: "request" */ './js/requestSource.js').then(module => {
             let requestSource = module.default;
             requestSource(selectedSourceId).then(articles => {
-                articlesBox.addSource(articles);
-                document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+                newsApp.dispatch({
+                    type: 'ADD_NEWS',
+                    articles: articles
+                })
                 showMoreButton.classList.remove('hide');
                 pageOverlay.classList.add('hide');
-            })    
+            })
         });
     } else {
     	e.target.dataset.sourceActive = 'false';
     	e.target.classList.toggle('activeSource');
-    	articlesBox.removeSource(selectedSourceId);
-    	document.querySelector('.articleBoxContainer').innerHTML = articlesBox.render();
+        newsApp.dispatch({
+            type: 'REMOVE_NEWS',
+            sourceId: selectedSourceId
+        })
     	if (articlesBox.articlesDisplayedNumber === 0) {
     		showMoreButton.classList.add('hide');
     	}
