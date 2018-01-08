@@ -3,7 +3,7 @@ export default function Article(author, description, publishDate, sourceObj, tit
 			resDescription = description || '',
 			resPublishDate = new Date(publishDate).toLocaleString(),
 			resImgUrl = imgUrl || '/images/no-image.png';  //'https://i.imgur.com/LHZLUVp.png'
-	
+
 
 	return `<div class="article">
 				<a href="${url}" class="articleImage" style="background-image:url(${resImgUrl}); background-position:center;"></a>

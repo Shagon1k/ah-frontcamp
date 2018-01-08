@@ -19,7 +19,7 @@ viewsFactory.createOverlay(CONFIG.MAIN_VIEWS_IDS.overlayId).render();
 let sourcesArray = [],
     articlesArray = [],
     sourceChooser,
-    articlesBox,      
+    articlesBox,
     showMoreButton = document.querySelector('.showMoreButton'),
     pageOverlay = document.getElementById(CONFIG.MAIN_VIEWS_IDS.overlayId);
 
@@ -29,21 +29,21 @@ function articlesReducer(state = [], action) {
             return [...state, ...action.articles];
         case 'REMOVE_NEWS':
             return state.filter(value => value.source.id !== action.sourceId)
-        default: 
+        default:
             return state
     }
 }
 
 function newsAppReducer(state = {}, action) {
     switch (action.type) {
-        case 'ADD_NEWS': 
-            return Object.assign({}, state, {
+        case 'ADD_NEWS':
+            return {...state,
                 articles: articlesReducer(state.articles, action)
-            })
+            };
         case 'REMOVE_NEWS':
-        return Object.assign({}, state, {
+        return {...state,
                 articles: articlesReducer(state.articles, action)
-            })
+            };
         default:
             return state
     }
@@ -80,7 +80,7 @@ document.querySelector('.sourceList').addEventListener('click', e => {
                 })
                 showMoreButton.classList.remove('hide');
                 pageOverlay.classList.add('hide');
-            })    
+            })
         });
     } else {
     	e.target.dataset.sourceActive = 'false';

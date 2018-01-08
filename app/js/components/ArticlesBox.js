@@ -37,7 +37,7 @@ class ArticlesBox {
     updateArticles(articles) {
         if (this._articlesDisplayedNumber === 0) {
             this._articlesDisplayedNumber += this._articlesAddingNumber;
-        }     
+        }
 
         this.articlesArray = articles;
 
@@ -60,7 +60,7 @@ class ArticlesBox {
                 this._articlesDisplayedNumber;
 
         for (let i = 0; i < numberToDisplay; i++) {
-            articlesStringTemplate += 
+            articlesStringTemplate +=
                 Article(this.articlesArray[i].author, this.articlesArray[i].description, this.articlesArray[i].publishedAt, this.articlesArray[i].source,
                     this.articlesArray[i].title, this.articlesArray[i].url, this.articlesArray[i].urlToImage);
         }
@@ -82,15 +82,16 @@ function noBitcoins(target, key) {
     target.prototype.render = function() {
         let articlesStringTemplate = '',
             arrayToDisplay = this.articlesArray.filter(article => {
-                return !article.description.includes('bitcoin');
+                return !article.description || !article.description.includes('bitcoin');
             }),
             numberToDisplay = this._articlesDisplayedNumber > arrayToDisplay.length ?
                 arrayToDisplay.length :
                 this._articlesDisplayedNumber;
 
         for (let i = 0; i < numberToDisplay; i++) {
-            articlesStringTemplate += Article(this.articlesArray[i].author, this.articlesArray[i].description, this.articlesArray[i].publishedAt, this.articlesArray[i].source,
-                    this.articlesArray[i].title, this.articlesArray[i].url, this.articlesArray[i].urlToImage);
+            articlesStringTemplate += Article(this.articlesArray[i].author, this.articlesArray[i].description,
+                this.articlesArray[i].publishedAt, this.articlesArray[i].source, this.articlesArray[i].title,
+                this.articlesArray[i].url, this.articlesArray[i].urlToImage);
         }
 
         return `<div class="articlesBox">
