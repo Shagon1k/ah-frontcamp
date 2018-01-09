@@ -3,6 +3,7 @@ import {API_KEY, INFO_CACHE_TIME} from './config.js';
 let newsSourceStorage = new Map();
 export default sourceId => {
 	let cachedSourceInfo = newsSourceStorage.get(sourceId);
+
 	if (cachedSourceInfo && (new Date - cachedSourceInfo.time) < INFO_CACHE_TIME) {
 		return Promise.resolve(cachedSourceInfo.articles);
 	} else {
