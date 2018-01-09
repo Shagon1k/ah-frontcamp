@@ -45,7 +45,7 @@ class ArticlesBox {
             this._articlesDisplayedNumber = this.articlesArray.length;
         }
 
-        this.articlesArray.sort((art1, art2) => art1.publishedAt < art2.publishedAt ? 1 : -1);
+        this.articlesArray.sort((art1, art2) => new Date(art1.publishedAt) < new Date(art2.publishedAt) ? 1 : -1);
     }
 
     @readonly
