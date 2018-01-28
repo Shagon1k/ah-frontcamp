@@ -1,8 +1,0 @@
-{
-	"presets": [
-		["env", {
-			modules: false
-		}]
-	],
-	"plugins": ["syntax-dynamic-import", "transform-object-rest-spread", "transform-decorators-legacy", "./utils/babel-plugins/remove-consolelog.js", "./utils/babel-plugins/dataset-to-attributes.js"]
-}
