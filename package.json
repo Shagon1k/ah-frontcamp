@@ -1,0 +1,32 @@
+{
+  "name": "ah-frontcamp",
+  "version": "1.0.0",
+  "description": "Node and express task",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  },
+  "scripts": {
+    "app": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shagon1k/ah-frontcamp.git"
+  },
+  "keywords": [
+    "Node",
+    "express",
+    "server",
+    "javascript"
+  ],
+  "author": "Alex Gur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shagon1k/ah-frontcamp/issues"
+  },
+  "homepage": "https://github.com/Shagon1k/ah-frontcamp#readme"
+}

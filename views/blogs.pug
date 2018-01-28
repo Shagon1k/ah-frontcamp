@@ -1,0 +1,20 @@
+html
+	head
+		title= 'Blogs'
+		link(rel='stylesheet', href='/styles/blog.css')
+	body
+		h1= 'Blogs: '
+		ul(class='blogsList')
+			each blog in blogs
+				li
+					a(href= '/blogs/' + blog.id)= blog.name
+					span(
+					class='deleteBlog'
+					data-id=blog.id)='X'
+		span='ID: '
+		input(
+			type='text'
+			id='addBlogInput')
+		button(
+			id='addBlogButton')= 'Add blog'
+		script(src='/js/blogs.js')
