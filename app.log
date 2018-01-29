@@ -1,0 +1,36 @@
+{"message":"Url: /blogs, method: GET","level":"info"}
+{"message":"Url: /favicon.ico, method: GET","level":"info"}
+{"message":"Url: /blogs/qwesadwqe, method: PUT","level":"info"}
+{"message":"Url: /blogs, method: GET","level":"info"}
+{"message":"Url: /favicon.ico, method: GET","level":"info"}
+{"message":"Url: /blogs/qwesadwqe, method: PUT","level":"info"}
+{"message":"Url: /blogs, method: GET","level":"info"}
+{"message":"Url: /favicon.ico, method: GET","level":"info"}
+{"message":"Url: /blogs/qwesadwqe, method: DELETE","level":"info"}
+{"message":"Url: /blogs, method: DELETE","level":"info"}
+{"message":"Url: /blogs, method: GET","level":"info"}
+{"message":"Url: /favicon.ico, method: GET","level":"info"}
+{"message":"Url: /blogs/blog1, method: GET","level":"info"}
+{"message":"Url: /favicon.ico, method: GET","level":"info"}
+{"message":"Url: /blogs, method: GET","level":"info"}
+{"message":"Url: /favicon.ico, method: GET","level":"info"}
+{"message":"Url: /blogs/blog1, method: DELETE","level":"info"}
+{"message":"Url: /blogs, method: DELETE","level":"info"}
+{"message":"Url: /blogs, method: GET","level":"info"}
+{"message":"Url: /favicon.ico, method: GET","level":"info"}
+2018-01-29T15:34:03.287Z [APP] info: Url: /blogs, method: GET
+2018-01-29T15:34:03.821Z [APP] info: Url: /favicon.ico, method: GET
+2018-01-29T15:34:17.761Z [APP] info: Url: /blogs/blog2, method: GET
+2018-01-29T15:34:17.941Z [APP] info: Url: /favicon.ico, method: GET
+2018-01-29T15:34:19.087Z [APP] info: Url: /blogs, method: GET
+2018-01-29T15:34:19.205Z [APP] info: Url: /favicon.ico, method: GET
+2018-01-29T15:34:21.614Z [APP] info: Url: /blogs/asdqwe, method: PUT
+2018-01-29T15:34:21.625Z [APP] info: Url: /blogs, method: GET
+2018-01-29T15:34:21.726Z [APP] info: Url: /favicon.ico, method: GET
+2018-01-29T15:34:24.405Z [APP] info: Url: /blogs/asdadwqeasd, method: PUT
+2018-01-29T15:34:24.417Z [APP] info: Url: /blogs, method: GET
+2018-01-29T15:34:24.540Z [APP] info: Url: /favicon.ico, method: GET
+2018-01-29T15:34:26.680Z [APP] info: Url: /blogs/asdqwe, method: DELETE
+2018-01-29T15:34:26.688Z [APP] info: Url: /blogs, method: DELETE
+2018-01-29T15:34:26.710Z [APP] info: Url: /blogs, method: GET
+2018-01-29T15:34:26.822Z [APP] info: Url: /favicon.ico, method: GET

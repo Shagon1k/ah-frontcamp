@@ -6,6 +6,8 @@ let util = require('util');
 let app = express();
 let router = express.Router();
 
+let logger = require('./logger.js');
+
 app.set('views', './views/');
 app.set('view engine', 'pug');
 
@@ -15,8 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(function (req, res, next) {
-	console.log(req.url);
-	console.log(req.method);
+    logger.info(`Url: ${req.url}, method: ${req.method}`);
  	console.log('Time:', (new Date()).toLocaleTimeString());
  	next();
 })
@@ -36,6 +37,6 @@ app.use(function(req, res, next) {
 	next();
 })
 
-app.listen(1488, function () {
- 	console.log('Example app listening on port 1488!');
+app.listen(1337, function () {
+ 	console.log('Example app listening on port 1337!');
 });
