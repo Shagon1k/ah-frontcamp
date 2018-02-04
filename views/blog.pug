@@ -3,6 +3,11 @@ html
 		title= blog.name
 	body
 		h1= blog.name
-		p= blog.message
+		textarea(
+			data-id= blog.id,
+			id='blogMessageArea')= blog.message
+		button(
+			id='updateBLog')= 'Update blog'
 		a(
 			href='/blogs')= 'Blogs page'
+		script(src='/js/blog.js')

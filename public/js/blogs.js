@@ -22,7 +22,6 @@ addBlogButton.addEventListener('click', e => {
 
 	let xhr = new XMLHttpRequest(),
 		jsonData = {
-			id: addBlogInput.value,
 			name: addBlogInput.value,
 			message: 'Dummy message'
 		};

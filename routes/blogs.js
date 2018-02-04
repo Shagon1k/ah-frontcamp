@@ -1,47 +1,60 @@
 let express = require('express');
 let router = express.Router();
 let bodyParser = require('body-parser');
+let mongoose = require('mongoose');
 
-let blogsArray = [
-	{
-		id: 'blog1',
-		name: 'Blog one',
-		message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laboriosam.'
-	},
-	{
-		id: 'blog2',
-		name: 'Blog two',
-		message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laboriosam.'
-	}
-];
+const Blog = require('../models/blog.js')(mongoose);
 
-router.get('/', function(req, res) {
-	res.render('blogs', { blogs: blogsArray});
+router.get('/', (req, res) => {
+	Blog.find({}, (error, blogs) => {
+		if(!blogs) next(new Error('No blogs found :('));
+		if (!error) {
+			res.render('blogs', {blogs: blogs})
+		} else {
+			next(error);
+		}
+	});
 });
 
-router.get('/:id', function(req, res, next) {
-	let id = req.params.id,
-		blog = blogsArray.find(el => el.id === id);
+router.get('/:id', (req, res, next) => {
+	const id = req.params.id;
 
-	if (blog) {
-		res.render('blog', {blog: blog});
-	} else {
-		next();
-	}
+	Blog.findById(id, (error, blog) => {
+		if (!error) {
+			res.render('blog', {blog: blog})
+		} else {
+			next(error);
+		}
+	});
 });
 
-router.put('/:id', function(req, res, next) {
-	blogsArray.push(req.body);
-	res.end('/');
+router.put('/:name', (req, res, next) => {
+	const blog = new Blog({name: req.body.name, message: req.body.message});
+
+	blog.save().then(() => {
+		res.end('/');
+	});
 });
 
-router.post('/', function(req, res, next) {
-	console.log('POST BLOGS');				// What should we do here?
+router.post('/update', (req, res, next) => {
+	const id = req.body.id,
+		message = req.body.message;
+
+	Blog.findByIdAndUpdate(id, {message: message}, (error, blog) => {
+		if (!error) {
+			res.redirect('/blogs' + blog.id);
+		} else {
+			next(error);
+		}
+	});
 });
 
-router.delete('/:id', function(req, res, next) {
-	blogsArray = blogsArray.filter(el => el.id !== req.params.id);
-	res.redirect('/blogs');
+router.delete('/:id', (req, res, next) => {
+	const id = req.params.id;
+
+	Blog.findById(id).remove(() => {
+		res.redirect('/blogs');
+	});
 });
 
 module.exports = router;

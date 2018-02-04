@@ -34,3 +34,231 @@
 2018-01-29T15:34:26.688Z [APP] info: Url: /blogs, method: DELETE
 2018-01-29T15:34:26.710Z [APP] info: Url: /blogs, method: GET
 2018-01-29T15:34:26.822Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:00:26.301Z [APP] info: Url: /, method: GET
+2018-02-03T10:00:26.584Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:04:23.867Z [APP] error: uncaughtException: E11000 duplicate key error collection: frontcamp.blogs index: name_1 dup key: { : "Blog one" }
+MongoError: E11000 duplicate key error collection: frontcamp.blogs index: name_1 dup key: { : "Blog one" }
+    at D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\pool.js:595:61
+    at authenticateStragglers (D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\pool.js:513:16)
+    at Connection.messageHandler (D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\pool.js:549:5)
+    at emitMessageHandler (D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\connection.js:309:10)
+    at Socket.<anonymous> (D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\connection.js:452:17)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:594:20)
+2018-02-03T10:04:43.212Z [APP] error: uncaughtException: E11000 duplicate key error collection: frontcamp.blogs index: name_1 dup key: { : "Blog one" }
+MongoError: E11000 duplicate key error collection: frontcamp.blogs index: name_1 dup key: { : "Blog one" }
+    at D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\pool.js:595:61
+    at authenticateStragglers (D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\pool.js:513:16)
+    at Connection.messageHandler (D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\pool.js:549:5)
+    at emitMessageHandler (D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\connection.js:309:10)
+    at Socket.<anonymous> (D:\ah-frontcamp\node_modules\mongodb-core\lib\connection\connection.js:452:17)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at Socket.Readable.push (_stream_readable.js:208:10)
+    at TCP.onread (net.js:594:20)
+2018-02-03T10:10:11.795Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:10:11.897Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:10:13.964Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:12:28.241Z [APP] info: Url: /, method: GET
+2018-02-03T10:12:28.459Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:12:30.878Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:12:30.996Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:12:37.740Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: DELETE
+2018-02-03T10:12:37.748Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:12:37.854Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:12:39.189Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:12:40.489Z [APP] info: Url: /, method: GET
+2018-02-03T10:12:40.587Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:14:31.418Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:14:31.796Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:15:10.280Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:15:10.497Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:15:12.131Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:17:19.844Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:17:21.176Z [APP] info: Url: /, method: GET
+2018-02-03T10:17:21.392Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:17:22.371Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:17:55.405Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:18:08.939Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:18:11.386Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:19:45.958Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:19:46.185Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:19:47.706Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:19:48.576Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:19:48.820Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:19:50.078Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:19:50.285Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:19:51.623Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:20:02.432Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:20:02.838Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:20:09.032Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:20:37.405Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:20:37.817Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:21:15.639Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:21:17.268Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:21:17.502Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:21:58.527Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:21:59.427Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:21:59.658Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:22:01.081Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:22:01.313Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:24:42.034Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:24:42.478Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:24:48.087Z [APP] info: Url: /blogs/Hui, method: PUT
+2018-02-03T10:24:48.095Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:24:48.359Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:25:24.482Z [APP] info: Url: /blogs/Hui, method: PUT
+2018-02-03T10:25:24.506Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:25:24.964Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:26:14.491Z [APP] info: Url: /blogs/Hui, method: PUT
+2018-02-03T10:26:14.520Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:26:14.960Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:26:17.182Z [APP] info: Url: /blogs/5a758e465d045d15e4e4bc2e, method: GET
+2018-02-03T10:26:17.457Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:26:18.434Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:26:18.662Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:27:16.521Z [APP] info: Url: /blogs/Hui%20moi, method: PUT
+2018-02-03T10:27:16.530Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:27:16.775Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:27:20.603Z [APP] info: Url: /blogs/5a758e845d045d15e4e4bc2f, method: GET
+2018-02-03T10:27:20.824Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:27:21.685Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:27:21.915Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:32:32.491Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:32:32.919Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:32:34.499Z [APP] info: Url: /blogs/5a758e845d045d15e4e4bc2f, method: DELETE
+2018-02-03T10:32:34.520Z [APP] info: Url: /blogs, method: DELETE
+2018-02-03T10:32:34.538Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:32:34.774Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:33:04.708Z [APP] info: Url: /blogs/5a758e465d045d15e4e4bc2e, method: GET
+2018-02-03T10:33:04.937Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:36:27.327Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:36:27.772Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:36:29.243Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:36:29.469Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:37:19.998Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:37:21.441Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:37:21.662Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:37:27.522Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:37:28.712Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:37:28.938Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:37:30.164Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:37:30.370Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:37:33.647Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:39:18.389Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:39:18.624Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:39:21.162Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:39:27.702Z [APP] info: Url: /blogs/5a758e465d045d15e4e4bc2e, method: GET
+2018-02-03T10:39:27.936Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:40:12.755Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:40:13.814Z [APP] info: Url: /blogs/5a758e465d045d15e4e4bc2e, method: GET
+2018-02-03T10:40:14.044Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:41:01.295Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:41:02.371Z [APP] info: Url: /blogs/5a758e465d045d15e4e4bc2e, method: GET
+2018-02-03T10:41:02.600Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:55:11.052Z [APP] info: Url: /blogs/5a758e465d045d15e4e4bc2e, method: GET
+2018-02-03T10:55:11.475Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:55:33.644Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:55:33.911Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:55:35.184Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:55:35.420Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:56:13.012Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:56:13.446Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:56:38.844Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:56:39.270Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:56:45.851Z [APP] info: Url: /blogs/update, method: POST
+2018-02-03T10:56:45.914Z [APP] info: Url: /blogs5a7589707287040a54947a4c, method: GET
+2018-02-03T10:56:45.930Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:56:46.163Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:56:50.749Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:56:50.995Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:56:53.512Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:56:53.736Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:56:56.928Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:56:57.176Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:56:58.266Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:56:58.480Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:57:03.686Z [APP] info: Url: /blogs/update, method: POST
+2018-02-03T10:57:03.691Z [APP] info: Url: /blogs5a7589707287040a54947a4b, method: GET
+2018-02-03T10:57:03.708Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:57:03.937Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:57:05.069Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:57:05.291Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:57:06.806Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T10:57:07.028Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:57:08.376Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:57:08.593Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:57:23.467Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:57:23.913Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:57:24.957Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:57:25.186Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:57:33.399Z [APP] info: Url: /blogs/update, method: POST
+2018-02-03T10:57:33.416Z [APP] info: Url: /blogs5a7589707287040a54947a4c, method: GET
+2018-02-03T10:57:39.234Z [APP] info: Url: /blogs, method: GET
+2018-02-03T10:57:39.487Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T10:57:40.797Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T10:57:41.015Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:08:34.104Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:08:34.545Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:08:36.122Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:08:36.360Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:08:41.166Z [APP] info: Url: /blogs/asd, method: PUT
+2018-02-03T11:08:41.189Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:08:41.421Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:08:43.840Z [APP] info: Url: /blogs/5a7598395087f40f2863d187, method: GET
+2018-02-03T11:08:44.074Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:08:49.043Z [APP] info: Url: /blogs/update, method: POST
+2018-02-03T11:08:49.057Z [APP] info: Url: /blogs5a7598395087f40f2863d187, method: GET
+2018-02-03T11:08:50.227Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:08:50.463Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:08:52.024Z [APP] info: Url: /blogs/5a7598395087f40f2863d187, method: GET
+2018-02-03T11:08:52.245Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:08:54.174Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:08:54.407Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:15:29.086Z [APP] info: Url: /blogsasdasdas, method: GET
+2018-02-03T11:15:29.488Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:15:37.540Z [APP] info: Url: /blogsasdasdas, method: GET
+2018-02-03T11:15:37.766Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:16:30.318Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:16:30.762Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:16:32.944Z [APP] info: Url: /blogs/5a7598395087f40f2863d187, method: GET
+2018-02-03T11:17:09.170Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:17:10.962Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:17:11.227Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:17:12.561Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T11:17:12.768Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:17:20.811Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:17:39.854Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:17:40.282Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-03T11:17:43.982Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T11:18:05.521Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T11:18:50.815Z [APP] info: Url: /blogs/5a758e465d045d15e4e4bc2e, method: GET
+2018-02-03T11:19:49.443Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:19:50.906Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T11:20:10.865Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T11:22:06.981Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T11:22:10.456Z [APP] info: Url: /blogs/5a7598395087f40f2863d187, method: GET
+2018-02-03T11:22:21.575Z [APP] info: Url: /blogs/5a7598395087f40f2863d187, method: GET
+2018-02-03T11:22:24.801Z [APP] info: Url: /blogs/5a758e465d045d15e4e4bc2e, method: GET
+2018-02-03T11:22:58.042Z [APP] info: Url: /blogs/5a758e465d045d15e4e4bc2e, method: GET
+2018-02-03T11:24:50.444Z [APP] info: Url: /blogs/5a7589707287040a54947a4c, method: GET
+2018-02-03T11:25:30.709Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:25:32.081Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T11:25:52.023Z [APP] info: Url: /blogs/5a7589707287040a54947a4b, method: GET
+2018-02-03T11:25:57.324Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:42:40.289Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:42:43.416Z [APP] info: Url: /blogs/5a7598395087f40f2863d187, method: DELETE
+2018-02-03T11:42:43.443Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:42:46.648Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:43:06.232Z [APP] info: Url: /blogs, method: GET
+2018-02-03T11:43:09.064Z [APP] info: Url: /blogs/5a7598395087f40f2863d187, method: DELETE
+2018-02-03T11:43:09.075Z [APP] info: Url: /blogs, method: DELETE
+2018-02-03T11:43:09.094Z [APP] info: Url: /blogs, method: GET
+2018-02-04T09:57:27.832Z [APP] info: Url: /, method: GET
+2018-02-04T09:57:28.152Z [APP] info: Url: /favicon.ico, method: GET
