@@ -1,0 +1,16 @@
+html
+	head
+		title= 'Express Dummy app'
+		link(rel='stylesheet', href='/styles/main.css')
+	body
+		h1= 'Index here!'
+		if user
+			h2
+				a(href= '/blogs')= 'Blogs page'
+			h2
+				a(href= '/users/logout')= 'Logout'
+		else
+			h2
+				a(href= '/users/login')= 'Login'
+			h2
+				a(href= '/users/register')= 'Registration'

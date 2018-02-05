@@ -1,7 +1,7 @@
 let winston = require('winston');
 
 const logFormat = winston.format.printf(info => {
-  return `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`;
+    return `${info.timestamp} [${info.label}] ${info.level}: ${info.message}`;
 });
 
 const logger = winston.createLogger({

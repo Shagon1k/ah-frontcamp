@@ -262,3 +262,657 @@ MongoError: E11000 duplicate key error collection: frontcamp.blogs index: name_1
 2018-02-03T11:43:09.094Z [APP] info: Url: /blogs, method: GET
 2018-02-04T09:57:27.832Z [APP] info: Url: /, method: GET
 2018-02-04T09:57:28.152Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:17:56.228Z [APP] info: Url: /, method: GET
+2018-02-05T10:17:56.310Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:17:56.483Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:17:58.570Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:18:01.766Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:01.851Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:01.854Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:02.001Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:04.475Z [APP] info: Url: /blogs/asd, method: PUT
+2018-02-05T10:18:04.629Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:04.696Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:04.698Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:04.753Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:06.555Z [APP] info: Url: /blogs/qweasd, method: PUT
+2018-02-05T10:18:06.567Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:06.623Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:06.624Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:06.687Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:07.409Z [APP] info: Url: /blogs/5a782f5e930516348c70d2c5, method: GET
+2018-02-05T10:18:07.459Z [APP] info: Url: /js/blog.js, method: GET
+2018-02-05T10:18:07.518Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:18.364Z [APP] info: Url: /blogs/update, method: POST
+2018-02-05T10:18:18.396Z [APP] info: Url: /blogs5a782f5e930516348c70d2c5, method: GET
+2018-02-05T10:18:20.472Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:20.534Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:20.535Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:20.599Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:21.441Z [APP] info: Url: /blogs/5a782f5e930516348c70d2c5, method: GET
+2018-02-05T10:18:21.475Z [APP] info: Url: /js/blog.js, method: GET
+2018-02-05T10:18:21.530Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:22.944Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:23.008Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:23.009Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:23.061Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:24.304Z [APP] info: Url: /blogs/5a782f5c930516348c70d2c4, method: GET
+2018-02-05T10:18:24.326Z [APP] info: Url: /js/blog.js, method: GET
+2018-02-05T10:18:24.384Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:29.042Z [APP] info: Url: /blogs/update, method: POST
+2018-02-05T10:18:29.048Z [APP] info: Url: /blogs5a782f5c930516348c70d2c4, method: GET
+2018-02-05T10:18:29.568Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:29.598Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:29.600Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:29.656Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:30.817Z [APP] info: Url: /blogs/5a782f5c930516348c70d2c4, method: GET
+2018-02-05T10:18:30.842Z [APP] info: Url: /js/blog.js, method: GET
+2018-02-05T10:18:30.901Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:34.160Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:34.194Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:34.199Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:34.252Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:37.667Z [APP] info: Url: /blogs/new%20blog, method: PUT
+2018-02-05T10:18:37.679Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:37.702Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:37.705Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:37.755Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:43.331Z [APP] info: Url: /blogs/delete%20me, method: PUT
+2018-02-05T10:18:43.341Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:43.374Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:43.376Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:43.430Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:46.170Z [APP] info: Url: /blogs/ohoho, method: PUT
+2018-02-05T10:18:46.182Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:46.209Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:46.210Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:46.264Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:46.721Z [APP] info: Url: /blogs/5a782f86930516348c70d2c8, method: GET
+2018-02-05T10:18:46.742Z [APP] info: Url: /js/blog.js, method: GET
+2018-02-05T10:18:46.802Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:51.610Z [APP] info: Url: /blogs/update, method: POST
+2018-02-05T10:18:51.615Z [APP] info: Url: /blogs5a782f86930516348c70d2c8, method: GET
+2018-02-05T10:18:52.488Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:52.514Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:52.515Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:52.577Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:53.385Z [APP] info: Url: /blogs/5a782f86930516348c70d2c8, method: GET
+2018-02-05T10:18:53.406Z [APP] info: Url: /js/blog.js, method: GET
+2018-02-05T10:18:53.493Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:54.145Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:18:54.173Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:18:54.175Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:18:54.230Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:18:54.993Z [APP] info: Url: /blogs/5a782f7d930516348c70d2c6, method: GET
+2018-02-05T10:18:55.014Z [APP] info: Url: /js/blog.js, method: GET
+2018-02-05T10:18:55.071Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:19:00.074Z [APP] info: Url: /blogs/update, method: POST
+2018-02-05T10:19:00.079Z [APP] info: Url: /blogs5a782f7d930516348c70d2c6, method: GET
+2018-02-05T10:19:00.553Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:19:00.581Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:19:00.588Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:19:00.640Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:19:01.626Z [APP] info: Url: /blogs/5a782f83930516348c70d2c7, method: DELETE
+2018-02-05T10:19:01.631Z [APP] info: Url: /blogs, method: DELETE
+2018-02-05T10:19:01.642Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:19:01.670Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:19:01.672Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:19:01.728Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:19:05.937Z [APP] info: Url: /, method: GET
+2018-02-05T10:19:05.952Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:19:06.009Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:20:08.776Z [APP] info: Url: /asdsad, method: GET
+2018-02-05T10:20:08.858Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:20:10.209Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:26:57.461Z [APP] info: Url: /, method: GET
+2018-02-05T10:26:57.911Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:27:07.666Z [APP] info: Url: /, method: GET
+2018-02-05T10:27:07.868Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:28:49.210Z [APP] info: Url: /, method: GET
+2018-02-05T10:28:49.430Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:28:51.560Z [APP] info: Url: /, method: GET
+2018-02-05T10:28:51.750Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:29:07.610Z [APP] info: Url: /, method: GET
+2018-02-05T10:29:07.639Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:29:07.813Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:29:30.314Z [APP] info: Url: /, method: GET
+2018-02-05T10:29:30.532Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:29:47.020Z [APP] info: Url: /, method: GET
+2018-02-05T10:29:47.228Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:29:48.219Z [APP] info: Url: /, method: GET
+2018-02-05T10:29:48.402Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:30:20.341Z [APP] info: Url: /, method: GET
+2018-02-05T10:30:20.547Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:30:37.604Z [APP] info: Url: /, method: GET
+2018-02-05T10:30:37.813Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:07.107Z [APP] info: Url: /, method: GET
+2018-02-05T10:31:07.313Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:41.658Z [APP] info: Url: /, method: GET
+2018-02-05T10:31:41.689Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:31:41.880Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:49.380Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:31:49.432Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:31:49.434Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:31:49.625Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:52.365Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:53.844Z [APP] info: Url: /login, method: GET
+2018-02-05T10:31:54.026Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:55.995Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:56.782Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:57.627Z [APP] info: Url: /logout, method: GET
+2018-02-05T10:31:57.814Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:58.498Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:31:58.954Z [APP] info: Url: /register, method: GET
+2018-02-05T10:31:59.142Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:32:00.024Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:35:37.587Z [APP] info: Url: /, method: GET
+2018-02-05T10:35:37.905Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:35:38.072Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:35:45.149Z [APP] info: Url: /, method: GET
+2018-02-05T10:35:45.484Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:35:45.641Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:35:55.645Z [APP] info: Url: /, method: GET
+2018-02-05T10:35:55.975Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:35:56.144Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:36:07.738Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:36:07.813Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T10:36:07.815Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T10:36:08.001Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:36:09.544Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:36:38.828Z [APP] info: Url: /, method: GET
+2018-02-05T10:36:39.156Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:36:39.328Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:36:42.767Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:36:42.777Z [APP] info: Url: /users/login, method: GET
+2018-02-05T10:36:42.962Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:36:44.752Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:50:45.764Z [APP] info: Url: /, method: GET
+2018-02-05T10:50:46.096Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:50:46.268Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:50:50.828Z [APP] info: Url: /blogs, method: GET
+2018-02-05T10:50:50.841Z [APP] info: Url: /users/login, method: GET
+2018-02-05T10:50:51.051Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:50:59.629Z [APP] info: Url: /users/register, method: GET
+2018-02-05T10:50:59.885Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:51:07.804Z [APP] info: Url: /userssadasd, method: GET
+2018-02-05T10:51:08.007Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:51:10.325Z [APP] info: Url: /, method: GET
+2018-02-05T10:51:10.375Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:51:10.536Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:52:19.628Z [APP] info: Url: /, method: GET
+2018-02-05T10:52:19.677Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:52:19.854Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:52:21.043Z [APP] info: Url: /login, method: GET
+2018-02-05T10:52:21.224Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:52:23.065Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:52:23.573Z [APP] info: Url: /register, method: GET
+2018-02-05T10:52:23.749Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:52:24.720Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:30.194Z [APP] info: Url: /, method: GET
+2018-02-05T10:53:30.227Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:53:30.407Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:31.090Z [APP] info: Url: /users/login, method: GET
+2018-02-05T10:53:31.303Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:32.635Z [APP] info: Url: /, method: GET
+2018-02-05T10:53:32.661Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:53:32.824Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:33.530Z [APP] info: Url: /users/register, method: GET
+2018-02-05T10:53:33.717Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:34.642Z [APP] info: Url: /, method: GET
+2018-02-05T10:53:34.663Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:53:34.816Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:35.483Z [APP] info: Url: /users/login, method: GET
+2018-02-05T10:53:35.663Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:43.273Z [APP] info: Url: /, method: GET
+2018-02-05T10:53:43.296Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:53:43.468Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:44.163Z [APP] info: Url: /users/login, method: GET
+2018-02-05T10:53:44.350Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:44.778Z [APP] info: Url: /, method: GET
+2018-02-05T10:53:44.802Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:53:44.967Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:53:45.427Z [APP] info: Url: /users/register, method: GET
+2018-02-05T10:53:45.619Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:54:08.979Z [APP] info: Url: /users/register, method: GET
+2018-02-05T10:54:09.192Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T10:54:10.738Z [APP] info: Url: /, method: GET
+2018-02-05T10:54:10.762Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T10:54:10.928Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T11:32:39.191Z [APP] info: Url: /, method: GET
+2018-02-05T11:32:39.216Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T11:32:39.363Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T12:25:07.477Z [APP] info: Url: /users/login, method: GET
+2018-02-05T12:25:07.632Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T12:25:08.413Z [APP] info: Url: /, method: GET
+2018-02-05T12:25:08.432Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T12:25:08.491Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T12:25:09.203Z [APP] info: Url: /users/register, method: GET
+2018-02-05T12:25:09.277Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T12:25:10.116Z [APP] info: Url: /, method: GET
+2018-02-05T12:25:10.132Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T12:25:10.184Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T12:50:28.899Z [APP] info: Url: /, method: GET
+2018-02-05T12:50:29.252Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T12:50:29.483Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:23:53.713Z [APP] info: Url: /, method: GET
+2018-02-05T13:23:54.039Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:23:54.184Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:24:02.709Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:24:02.833Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:24:21.740Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:24:21.884Z [APP] error: uncaughtException: next is not defined
+ReferenceError: next is not defined
+    at User.createUser (D:\Trash\FCamp\ah-frontcamp\routes\users.js:73:4)
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\mongoose\lib\model.js:3928:16
+    at $__save.error (D:\Trash\FCamp\ah-frontcamp\node_modules\mongoose\lib\model.js:341:16)
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:246:48
+    at next (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:167:27)
+    at Kareem.execPost (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:217:3)
+    at _handleWrapError (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:245:21)
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:271:14
+    at _next (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:94:14)
+    at process.nextTick (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:420:38)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+2018-02-05T13:25:16.220Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:25:16.748Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:25:27.773Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:25:27.979Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:25:30.100Z [APP] info: Url: /, method: GET
+2018-02-05T13:25:30.144Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:25:30.201Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:25:30.948Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:25:31.030Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:25:32.069Z [APP] info: Url: /, method: GET
+2018-02-05T13:25:32.103Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:25:32.155Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:25:32.669Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:25:32.767Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:25:42.638Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:25:42.778Z [APP] error: uncaughtException: next is not defined
+ReferenceError: next is not defined
+    at User.createUser (D:\Trash\FCamp\ah-frontcamp\routes\users.js:73:4)
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\mongoose\lib\model.js:3928:16
+    at $__save.error (D:\Trash\FCamp\ah-frontcamp\node_modules\mongoose\lib\model.js:341:16)
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:246:48
+    at next (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:167:27)
+    at Kareem.execPost (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:217:3)
+    at _handleWrapError (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:245:21)
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:271:14
+    at _next (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:94:14)
+    at process.nextTick (D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:420:38)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+2018-02-05T13:27:17.728Z [APP] info: Url: /, method: GET
+2018-02-05T13:27:18.057Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:27:18.208Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:27:20.271Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:27:20.393Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:27:32.689Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:27:32.839Z [APP] info: Url: /users/users/login, method: GET
+2018-02-05T13:27:33.009Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:28:43.063Z [APP] info: Url: /, method: GET
+2018-02-05T13:28:43.388Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:28:43.543Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:28:44.514Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:28:44.630Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:28:56.874Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:28:57.029Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:28:57.220Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:30:47.789Z [APP] info: Url: /, method: GET
+2018-02-05T13:30:48.117Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:30:48.269Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:30:49.481Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:30:49.601Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:01.896Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:31:02.044Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:31:02.235Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:15.096Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:31:15.208Z [APP] info: Url: /, method: GET
+2018-02-05T13:31:15.243Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:31:15.392Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:17.797Z [APP] info: Url: /blogs, method: GET
+2018-02-05T13:31:17.880Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T13:31:17.881Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T13:31:17.939Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:21.689Z [APP] info: Url: /, method: GET
+2018-02-05T13:31:21.741Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:31:21.799Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:23.872Z [APP] info: Url: /users/logout, method: GET
+2018-02-05T13:31:23.899Z [APP] info: Url: /, method: GET
+2018-02-05T13:31:23.954Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:31:24.009Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:26.416Z [APP] info: Url: /, method: GET
+2018-02-05T13:31:26.471Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:31:26.528Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:29.617Z [APP] info: Url: /blogs, method: GET
+2018-02-05T13:31:29.635Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:31:30.215Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:39.599Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:31:39.703Z [APP] info: Url: /, method: GET
+2018-02-05T13:31:39.748Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:31:39.891Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:42.875Z [APP] info: Url: /blogs, method: GET
+2018-02-05T13:31:42.981Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T13:31:42.985Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T13:31:43.744Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:47.307Z [APP] info: Url: /time, method: GET
+2018-02-05T13:31:47.382Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:49.407Z [APP] info: Url: /, method: GET
+2018-02-05T13:31:49.443Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:31:49.508Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:31:50.690Z [APP] info: Url: /blogs, method: GET
+2018-02-05T13:31:50.730Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T13:31:50.731Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T13:31:50.787Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:32:51.192Z [APP] info: Url: /blogs, method: GET
+2018-02-05T13:32:51.219Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:32:51.589Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:32:52.720Z [APP] info: Url: /, method: GET
+2018-02-05T13:32:52.766Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:32:52.829Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:32:53.856Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:32:53.974Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:33:09.455Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:33:09.652Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:34:13.595Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:34:14.079Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:34:25.727Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:34:25.757Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:34:25.958Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:35:36.178Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:35:36.649Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:36:09.713Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:36:09.914Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:36:13.277Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:36:13.316Z [APP] error: uncaughtException: req.flash is not a function
+TypeError: req.flash is not a function
+    at allFailed (D:\Trash\FCamp\ah-frontcamp\node_modules\passport\lib\middleware\authenticate.js:131:15)
+    at attempt (D:\Trash\FCamp\ah-frontcamp\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at Strategy.strategy.fail (D:\Trash\FCamp\ah-frontcamp\node_modules\passport\lib\middleware\authenticate.js:297:9)
+    at verified (D:\Trash\FCamp\ah-frontcamp\node_modules\passport-local\lib\strategy.js:82:30)
+    at User.getUserByUsername (D:\Trash\FCamp\ah-frontcamp\routes\users.js:26:11)
+    at Query.<anonymous> (D:\Trash\FCamp\ah-frontcamp\node_modules\mongoose\lib\model.js:3928:16)
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:297:21
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:135:16
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+2018-02-05T13:36:46.460Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:36:46.982Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:36:56.111Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:36:56.148Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:36:56.347Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:37:00.023Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:37:00.048Z [APP] error: uncaughtException: req.flash is not a function
+TypeError: req.flash is not a function
+    at allFailed (D:\Trash\FCamp\ah-frontcamp\node_modules\passport\lib\middleware\authenticate.js:131:15)
+    at attempt (D:\Trash\FCamp\ah-frontcamp\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at Strategy.strategy.fail (D:\Trash\FCamp\ah-frontcamp\node_modules\passport\lib\middleware\authenticate.js:297:9)
+    at verified (D:\Trash\FCamp\ah-frontcamp\node_modules\passport-local\lib\strategy.js:82:30)
+    at User.getUserByUsername (D:\Trash\FCamp\ah-frontcamp\routes\users.js:26:11)
+    at Query.<anonymous> (D:\Trash\FCamp\ah-frontcamp\node_modules\mongoose\lib\model.js:3928:16)
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:297:21
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:135:16
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+2018-02-05T13:40:02.730Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:40:03.209Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:40:04.079Z [APP] info: Url: /, method: GET
+2018-02-05T13:40:04.127Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:40:04.188Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:40:04.905Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:40:05.033Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:40:13.305Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:40:13.354Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:40:13.740Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:40:23.845Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:40:23.876Z [APP] error: uncaughtException: req.flash is not a function
+TypeError: req.flash is not a function
+    at allFailed (D:\Trash\FCamp\ah-frontcamp\node_modules\passport\lib\middleware\authenticate.js:131:15)
+    at attempt (D:\Trash\FCamp\ah-frontcamp\node_modules\passport\lib\middleware\authenticate.js:180:28)
+    at Strategy.strategy.fail (D:\Trash\FCamp\ah-frontcamp\node_modules\passport\lib\middleware\authenticate.js:297:9)
+    at verified (D:\Trash\FCamp\ah-frontcamp\node_modules\passport-local\lib\strategy.js:82:30)
+    at User.getUserByUsername (D:\Trash\FCamp\ah-frontcamp\routes\users.js:26:11)
+    at Query.<anonymous> (D:\Trash\FCamp\ah-frontcamp\node_modules\mongoose\lib\model.js:3928:16)
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:297:21
+    at D:\Trash\FCamp\ah-frontcamp\node_modules\kareem\index.js:135:16
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+2018-02-05T13:40:51.791Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:40:52.294Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:40:54.036Z [APP] info: Url: /, method: GET
+2018-02-05T13:40:54.093Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:40:54.151Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:42:57.800Z [APP] info: Url: /, method: GET
+2018-02-05T13:42:58.171Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:42:58.324Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:42:59.884Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:42:59.986Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:43:02.339Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:43:02.376Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:43:02.485Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:43:07.756Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:43:07.768Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:43:07.872Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:43:11.555Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:43:11.566Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:43:11.650Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:43:16.050Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:43:16.058Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:43:16.156Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:43:37.697Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:43:37.808Z [APP] info: Url: /, method: GET
+2018-02-05T13:43:37.855Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:43:38.003Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:45:08.352Z [APP] info: Url: /users/logout, method: GET
+2018-02-05T13:45:08.374Z [APP] info: Url: /, method: GET
+2018-02-05T13:45:08.687Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:45:08.833Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:45:09.515Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:45:09.630Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:45:22.634Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:45:22.691Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:45:22.732Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:45:22.901Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:46:14.340Z [APP] info: Url: /, method: GET
+2018-02-05T13:46:20.403Z [APP] info: Url: /, method: GET
+2018-02-05T13:46:20.460Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:46:21.376Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:46:29.232Z [APP] info: Url: /, method: GET
+2018-02-05T13:46:29.573Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:46:29.639Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:46:30.955Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:46:31.073Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:46:38.281Z [APP] info: Url: /users/register, method: POST
+2018-02-05T13:46:38.403Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:46:50.068Z [APP] info: Url: /, method: GET
+2018-02-05T13:46:50.121Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:46:50.270Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:47:26.923Z [APP] info: Url: /, method: GET
+2018-02-05T13:47:26.978Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:47:27.128Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:47:29.690Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:47:29.804Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:47:32.178Z [APP] info: Url: /, method: GET
+2018-02-05T13:47:32.228Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:47:32.284Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:47:32.764Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:47:32.854Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:47:37.257Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:47:37.274Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:47:37.358Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:47:43.427Z [APP] info: Url: /, method: GET
+2018-02-05T13:47:43.453Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:47:43.509Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:47:44.714Z [APP] info: Url: /, method: GET
+2018-02-05T13:47:44.739Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:47:44.805Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:47:45.754Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:47:45.840Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:47:53.234Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:47:53.244Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:47:53.323Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:48:02.953Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:48:03.063Z [APP] info: Url: /, method: GET
+2018-02-05T13:48:03.090Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:48:03.156Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:48:04.649Z [APP] info: Url: /blogs, method: GET
+2018-02-05T13:48:04.693Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T13:48:04.694Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T13:48:04.751Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:48:07.744Z [APP] info: Url: /, method: GET
+2018-02-05T13:48:07.776Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:48:07.834Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:51:37.743Z [APP] info: Url: /, method: GET
+2018-02-05T13:51:37.768Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:51:37.916Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:58:31.709Z [APP] info: Url: /, method: GET
+2018-02-05T13:58:32.042Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:58:32.197Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:58:37.053Z [APP] info: Url: /blogs, method: GET
+2018-02-05T13:58:37.067Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:58:37.925Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:58:43.579Z [APP] info: Url: /, method: GET
+2018-02-05T13:58:43.624Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:58:43.682Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:58:44.938Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:58:45.046Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:58:45.962Z [APP] info: Url: /, method: GET
+2018-02-05T13:58:45.992Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:58:46.050Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:58:59.422Z [APP] info: Url: /, method: GET
+2018-02-05T13:58:59.483Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:58:59.544Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:59:48.497Z [APP] info: Url: /, method: GET
+2018-02-05T13:59:48.550Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:59:48.698Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:59:49.290Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:59:49.390Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:59:54.368Z [APP] info: Url: /users/login, method: POST
+2018-02-05T13:59:54.399Z [APP] info: Url: /users/login, method: GET
+2018-02-05T13:59:54.498Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:59:55.681Z [APP] info: Url: /, method: GET
+2018-02-05T13:59:55.712Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T13:59:55.773Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T13:59:56.818Z [APP] info: Url: /users/register, method: GET
+2018-02-05T13:59:56.905Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:00:09.112Z [APP] info: Url: /users/register, method: POST
+2018-02-05T14:00:09.130Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:00:09.297Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:00:12.466Z [APP] info: Url: /, method: GET
+2018-02-05T14:00:12.499Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:00:12.564Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:00:13.113Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:00:13.195Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:00:22.561Z [APP] info: Url: /, method: GET
+2018-02-05T14:00:22.580Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:00:22.719Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:00:23.946Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:00:24.031Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:00:34.231Z [APP] info: Url: /users/register, method: POST
+2018-02-05T14:00:34.239Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:00:34.406Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:00:48.814Z [APP] info: Url: /users/login, method: POST
+2018-02-05T14:00:48.822Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:00:48.994Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:00:49.735Z [APP] info: Url: /, method: GET
+2018-02-05T14:00:49.759Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:00:49.815Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:00:50.408Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:00:50.484Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:01.166Z [APP] info: Url: /users/register, method: POST
+2018-02-05T14:01:01.332Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:08.584Z [APP] info: Url: /, method: GET
+2018-02-05T14:01:08.603Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:01:08.667Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:33.716Z [APP] info: Url: /, method: GET
+2018-02-05T14:01:34.062Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:01:34.225Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:34.711Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:01:34.835Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:35.511Z [APP] info: Url: /, method: GET
+2018-02-05T14:01:35.566Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:01:35.625Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:36.295Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:01:36.379Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:44.296Z [APP] info: Url: /users/login, method: POST
+2018-02-05T14:01:44.338Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:01:44.428Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:48.584Z [APP] info: Url: /, method: GET
+2018-02-05T14:01:48.607Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:01:48.670Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:49.704Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:01:49.798Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:01:58.474Z [APP] info: Url: /users/register, method: POST
+2018-02-05T14:01:58.583Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:02:01.063Z [APP] info: Url: /, method: GET
+2018-02-05T14:02:01.112Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:02:01.171Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:02:02.660Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:02:02.756Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:02:08.854Z [APP] info: Url: /users/login, method: POST
+2018-02-05T14:02:08.864Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:02:08.961Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:02:13.718Z [APP] info: Url: /users/login, method: POST
+2018-02-05T14:02:13.726Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:02:13.820Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:02:19.813Z [APP] info: Url: /users/login, method: POST
+2018-02-05T14:02:19.822Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:02:19.907Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:02:26.713Z [APP] info: Url: /users/login, method: POST
+2018-02-05T14:02:26.720Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:02:26.802Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:02:27.535Z [APP] info: Url: /, method: GET
+2018-02-05T14:02:27.564Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:02:27.620Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:03:26.739Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:03:26.912Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:03:37.501Z [APP] info: Url: /users/register, method: POST
+2018-02-05T14:03:37.519Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:03:37.696Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:05:12.492Z [APP] info: Url: /, method: GET
+2018-02-05T14:05:12.822Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:05:12.971Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:05:13.590Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:05:13.723Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:05:23.526Z [APP] info: Url: /users/register, method: POST
+2018-02-05T14:05:23.732Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:05:26.583Z [APP] info: Url: /, method: GET
+2018-02-05T14:05:26.621Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:05:26.679Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:05:27.924Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:05:28.020Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:05:40.076Z [APP] info: Url: /users/register, method: POST
+2018-02-05T14:05:40.104Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:05:40.301Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:07:11.700Z [APP] info: Url: /, method: GET
+2018-02-05T14:07:12.059Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:07:12.206Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:07:13.101Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:07:13.228Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:07:28.532Z [APP] info: Url: /users/register, method: POST
+2018-02-05T14:07:28.586Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:07:28.795Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:08:40.297Z [APP] info: Url: /, method: GET
+2018-02-05T14:08:40.625Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:08:40.770Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:08:41.420Z [APP] info: Url: /users/register, method: GET
+2018-02-05T14:08:41.545Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:08:53.434Z [APP] info: Url: /users/register, method: POST
+2018-02-05T14:08:53.585Z [APP] info: Url: /users/login, method: GET
+2018-02-05T14:08:53.779Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:09:03.937Z [APP] info: Url: /users/login, method: POST
+2018-02-05T14:09:04.043Z [APP] info: Url: /, method: GET
+2018-02-05T14:09:04.077Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:09:04.226Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:09:05.443Z [APP] info: Url: /blogs, method: GET
+2018-02-05T14:09:05.492Z [APP] info: Url: /styles/blog.css, method: GET
+2018-02-05T14:09:05.496Z [APP] info: Url: /js/blogs.js, method: GET
+2018-02-05T14:09:05.552Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:09:07.931Z [APP] info: Url: /, method: GET
+2018-02-05T14:09:07.970Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:09:08.032Z [APP] info: Url: /favicon.ico, method: GET
+2018-02-05T14:09:08.603Z [APP] info: Url: /users/logout, method: GET
+2018-02-05T14:09:08.611Z [APP] info: Url: /, method: GET
+2018-02-05T14:09:08.645Z [APP] info: Url: /styles/main.css, method: GET
+2018-02-05T14:09:08.700Z [APP] info: Url: /favicon.ico, method: GET

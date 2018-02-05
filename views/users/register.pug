@@ -1,0 +1,21 @@
+html
+	head
+		title= 'Ragister'
+	body
+	form(method='post', action="/users/register")
+		div.form-group
+			label Username:
+			input.form-control(name='username', placeholder='Username')
+		div.form-group
+			label Password:
+			input.form-control(name='password', placeholder='Password', type='password')
+		div.form-group
+			label Repeat Password:
+			input.form-control(name='password2', placeholder='Confirm password', type='password')
+		div.form-group
+			label Email:
+			input.form-control(name='email', placeholder='Email', type='email')
+		div
+			input(type='submit', value='Register')
+	a(
+		href='/')= 'Main page'
